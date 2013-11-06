@@ -1,0 +1,132 @@
+#+TITLE: Curiculum Vitae
+#+AUTHOR: Xavier Garrido
+#+KEYWORDS: vita, CV, resume
+#+OPTIONS: toc:nil num:nil
+#+LATEX_HEADER: \usepackage{cv-style}
+
+#+BEGIN_QUOTE
+I am an associate professor at the University of Paris-South, doing my research
+application at the Laboratoire de l'Accélérateur Linéaire.
+
+I am interested in neutrino physics, looking for Majorana neutrino and thus
+searching for neutrinoless double-beta decay. I also contribute to and maintain
+some open source projects on [[https://github.com/xgarrido][GitHub]].
+#+END_QUOTE
+
+* Appointments
+
+Associate professor at the University of Paris-South, France, 2009 -- /Present/
+
+Post doctoral position in the Karlsruhe Institute for Technology, Germany, 2008--2009
+
+* Education
+
+Ph.D. in Particle Physics from the University of Nantes, [[http://tel.archives-ouvertes.fr/index.php?halsid=kes9il76eb7ptpm9av2h0e1cp7&view_this_doc=tel-00642358&version=1]["Study of the
+composition of ultra high energy cosmic rays detected by the Pierre Auger
+Observatory and analysis of hadronic processes]], France, 2005--2008
+
+Master of Astrophysics at the University of Paris-South, France, 2003--2005
+
+* Teaching
+
+- Teaching assistant in Electromagnatism in Licence 3 of Fundamental Physics,
+  University of Paris-South
+
+- Teaching assistant in Nuclear & Particle Physics in Master 1 of Fundamental
+  Physics, University of Paris-South
+
+- C++ lectures in Master 1 of Fundamental Physics, University of Paris-South
+
+- Practical activities in Optics & in Nuclear Physics, Licence 3 and Master 1
+  of Fundamental Physics, University of Paris-South
+
+* Publications
+
+** Journal articles
+
+NA61/SHINE Collaboration, 2012. [[http://arxiv.org/abs/arXiv:1112.0150]["Measurement of production properties of
+positively charged kaons in proton-carbon interactions at 31 GeV/c"]], /Physical
+Review C85/.
+
+NEMO3 Collaboration, 2011. [[http://arxiv.org/abs/arXiv:1104.3716]["Measurement of the double beta decay half-life of
+\nbsp^{130}Te with the NEMO-3 detector"]], /Physical Review Letters 107/.
+
+NA61/SHINE Collaboration, 2011. [[http://arxiv.org/abs/arXiv:1102.0983]["Measurements of cross sections and charged pion
+spectra in proton-carbon interactions at 31 GeV/c"]], /Physical Review C84/.
+
+Pierre Auger Collaboration, 2011. [[http://arxiv.org/abs/arXiv:1010.6162]["The exposure of the hybrid detector of the
+Pierre Auger observatory"]], /Astroparticle Physics 34/.
+
+Pierre Auger Collaboration, 2010. [[http://arxiv.org/abs/1009.1855]["Update on the correlation of the highest
+energy cosmic rays with nearby extragalactic matter"]], /Astroparticle Physics
+34/.
+
+SuperNEMO Collaboration, 2010. [[http://arxiv.org/abs/arXiv:1005.1241]["Probing new physics models of neutrinoless
+double beta decay with SuperNEMO"]], /European Physics Journal C70/.
+
+NEMO3/SuperNEMO Collaboration, 2010. [[http://arxiv.org/abs/arXiv:1005.0343]["Results of the BiPo-1 prototype for
+radiopurity measurements for the SuperNEMO double beta decay source foils"]],
+/Nuclear Instruments and Methods in Physics Research A622/.
+
+SuperNEMO Collaboration, 2010. [[http://arxiv.org/abs/1004.3779]["Spectral modeling of scintillator for the NEMO-3
+and SuperNEMO detectors"]], /Nuclear Instruments and Methods in Physics Research
+A625/.
+
+Pierre Auger Collaboration, 2010. [[http://arxiv.org/abs/1111.6764]["Trigger and aperture of the surface detector
+array of the Pierre Auger observatory"]], /Nuclear Instruments and Methods in
+Physics Research A613/.
+
+Pierre Auger Collaboration, 2010. [[http://arxiv.org/abs/arXiv:1002.1975]["Measurement of the energy spectrum of cosmic
+rays above 10^{18} eV using the Pierre Auger observatory"]], /Physical
+Letters B685/.
+
+Pierre Auger Collaboration, 2010. [[http://arxiv.org/abs/1002.0699]["Measurement of the depth of maximum of
+extensive air showers above 10^{18} eV"]], /Physical Review Letters 104/.
+
+Pierre Auger Collaboration, 2010, [[http://arxiv.org/abs/arXiv:1002.0366]["A study of the effect of molecular and
+aerosol conditions in the atmosphere on air fluorescence measurements at the
+Pierre Auger observatory"]], /Astroparticle Physics 33/.
+
+Pierre Auger Collaboration, 2010. [[http://arxiv.org/abs/arXiv:0907.4282]["The fluorescence detector of the Pierre Auger
+observatory"]], /Nuclear Instruments and Methods in Physics Research A620/.
+
+I. Maris, R. Engel, X. Garrido, A. Haungs, M. Roth. R. Ulrich,
+M. Unger, 2009. [[http://arxiv.org/abs/arXiv:0907.0409]["Influence of low energy hadronic interactions on air-shower
+simulations"]], /Nuclear Physics Proceedings Supplements 196/.
+
+Pierre Auger Collaboration, 2009. [[http://arxiv.org/abs/0906.5497]["Atmospheric effects on extensive air showers
+observed with the surface detector of the Pierre Auger observatory"]],
+/Astroparticle Physics 32/.
+
+Pierre Auger Collaboration, 2009. [[http://arxiv.org/abs/0903.3385]["Limit on the diffuse flux of ultrahigh energy
+tau neutrinos with the surface detector of the Pierre Auger observatory"]],
+/Physical Review D79/.
+
+Pierre Auger Collaboration, 2009. [[http://arxiv.org/abs/0903.1127]["Upper limit on the cosmic-ray photon fraction
+at EeV energies from the Pierre Auger observatory"]], /Astroparticle Physics 31/.
+
+CODALEMA Collaboration, 2009. [[http://arxiv.org/abs/0906.2720]["Geomagnetic origin of the radio emission from
+cosmic ray induced air observed by CODALEMA"]], /Astroparticle Physics 31/.
+
+Pierre Auger Collaboration, 2008. [[http://arxiv.org/abs/0806.4302][Observation of the suppression of the flux of
+cosmic rays above 4 10^{19} eV]], /Physical Review Letters 101/.
+
+Pierre Auger Collaboration, 2008. [[http://arxiv.org/abs/0712.2843]["Correlation of the highest-energy cosmic rays
+with the positions of nearby active galactic nuclei"]], /Astroparticle Physics 29/
+
+Pierre Auger Collaboration, 2008. [[http://arxiv.org/abs/0712.1909]["Upper limit on the diffuse flux of UHE tau
+neutrinos from the Pierre Auger observatory"]], /Physical Review Letters 100/.
+
+Pierre Auger Collaboration, 2008. [[http://arxiv.org/abs/0712.1147]["Upper limit on the cosmic-ray photon flux
+above 10^{19} eV using the surface detector of the Pierre Auger observatory"]],
+/Astroparticle Physics 29/
+
+Pierre Auger Collaboration, 2007. [[http://arxiv.org/abs/0711.2256]["Correlation of the highest energy cosmic rays
+with nearby extragalactic objects"]], /Science 318/
+
+Pierre Auger Collaboration, 2007. [[http://arxiv.org/abs/astroph/0607382]["Anisotropy studies around the galactic centre
+at EeV energies with the Auger observatory"]], /Astroparticle Physics 27/
+
+Pierre Auger Collaboration, 2007. [[http://arxiv.org/abs/astro-ph/0606619]["An upper limit to the photon fraction in
+cosmic rays above 10^{19} eV from the Pierre Auger observatory"]], /Astroparticle
+Physics 27/
