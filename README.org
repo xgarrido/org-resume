@@ -61,7 +61,7 @@ publish the CV into =html= and =pdf=, respectively.
    `("publish-html-cv"
      :base-directory ,this-directory
      :base-extension "org"
-     :publishing-directory ,pub-directory
+     :publishing-directory ,(expand-file-name "html" pub-directory)
      :publishing-function org-html-publish-to-html
      :exclude ".*publish.*.org\\|README.org"
      :time-stamp-file nil
@@ -69,7 +69,7 @@ publish the CV into =html= and =pdf=, respectively.
      :with-toc nil
      :html-head "<link rel=\"stylesheet\" href=\"stylesheets/styles.css\">
                  <link rel=\"stylesheet\" href=\"stylesheets/org-pygments.css\">"
-     :html-preamble "<<html-preamble()>>"
+     :html-preamble  "<<html-preamble()>>"
      :html-postamble "<<html-postamble()>>"
      :html-head-include-scripts nil))
 #+END_SRC
@@ -77,7 +77,7 @@ publish the CV into =html= and =pdf=, respectively.
 *** CSS stylesheets                                              :noexport:
 **** Main stylesheets
 :PROPERTIES:
-:TANGLE:   pub/stylesheets/styles.css
+:TANGLE:   pub/html/stylesheets/styles.css
 :END:
 ***** Google fonts
 #+BEGIN_SRC css
@@ -363,7 +363,7 @@ publish the CV into =html= and =pdf=, respectively.
 
 **** Org source code styles
 :PROPERTIES:
-:TANGLE: pub/stylesheets/org-pygments.css
+:TANGLE: pub/html/stylesheets/org-pygments.css
 :END:
 
 #+BEGIN_SRC css
@@ -399,8 +399,8 @@ publish the CV into =html= and =pdf=, respectively.
   (defun org-publish-html ()
     (progn
       (org-publish-project "publish-html-cv" 'force)
-      (rename-file (expand-file-name "resume.html" (expand-file-name pub-directory))
-                   (expand-file-name "index.html" (expand-file-name pub-directory)) t)
+      (rename-file (expand-file-name "resume.html" (expand-file-name "html" pub-directory))
+                   (expand-file-name "index.html" (expand-file-name "html" pub-directory)) t)
       ))
 #+END_SRC
 
