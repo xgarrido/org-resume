@@ -3,11 +3,13 @@
 
 * Introduction
 
-A repository for my resume. It uses [[http://orgmode.org][org-mode]], a custom style sheet and a LaTeX
-file style. All styles are embedded within this file and a =Makefile= is
-provided to produce the =html= and =pdf= files.
+A repository for my vitæ. It uses [[http://orgmode.org][org-mode]], a custom style sheet and a LaTeX
+file style. The resume is done within [[file:resume.org][resume.org]] file. All styles are embedded
+within this file and a =Makefile= is provided to produce the =html= and =pdf=
+files.
 
 * Project publish function
+
 This section is used to publish the documentation to =html= and =pdf= in the
 =pub/= directory.
 
