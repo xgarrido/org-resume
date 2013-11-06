@@ -1,0 +1,25 @@
+.org-string,
+.org-type {
+    color: #DEB542;
+}
+
+.org-builtin,
+.org-variable-name,
+.org-constant,
+.org-function-name {
+    color: #69B7F0;
+}
+
+.org-comment,
+.org-comment-delimiter,
+.org-doc {
+    color: #93a1a1;
+}
+
+.org-keyword {
+    color: #D33682;
+}
+
+pre {
+    color: #777777;
+}
