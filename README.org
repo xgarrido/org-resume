@@ -406,6 +406,6 @@ publish the CV into =html= and =pdf=, respectively.
   (defun org-publish-pdf ()
     (progn
       (org-publish-project "publish-pdf-cv" 'force)
-      (shell-command "mkdir -p latex.d && mv *.{tex,auxlock,toc,out,fls,aux,pdf,log,fdb_latexmk,sty} latex.d/.")
+      (shell-command "mkdir -p pub/latex.d && mv *.{tex,auxlock,toc,out,fls,aux,pdf,log,fdb_latexmk,sty} pub/latex.d/.")
       ))
 #+END_SRC
