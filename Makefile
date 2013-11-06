@@ -28,7 +28,7 @@ html: $(FILES)
 	@tar xzvf /tmp/org-cv-publish.tar.gz
 	@if [ -n "`git status --porcelain`" ]; then git commit -am "update doc" && git push; fi
 	@git checkout master
-	@echo "NOTICE: HTML cocumentation done"
+	@echo "NOTICE: HTML documentation done"
 
 clean:
 	@rm -f *.elc *.aux *.tex *.pdf *~
