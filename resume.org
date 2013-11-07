@@ -42,24 +42,10 @@ Master of Astrophysics at the University of Paris-South, France, 2003--2005
 
 * Publications
 
-** Journal articles
-
-NA61/SHINE Collaboration, 2012. [[http://arxiv.org/abs/arXiv:1112.0150]["Measurement of production properties of
-positively charged kaons in proton-carbon interactions at 31 GeV/c"]], /Physical
-Review C85/.
+** Neutrino physics
 
 NEMO3 Collaboration, 2011. [[http://arxiv.org/abs/arXiv:1104.3716]["Measurement of the double beta decay half-life of
 \nbsp^{130}Te with the NEMO-3 detector"]], /Physical Review Letters 107/.
-
-NA61/SHINE Collaboration, 2011. [[http://arxiv.org/abs/arXiv:1102.0983]["Measurements of cross sections and charged pion
-spectra in proton-carbon interactions at 31 GeV/c"]], /Physical Review C84/.
-
-Pierre Auger Collaboration, 2011. [[http://arxiv.org/abs/arXiv:1010.6162]["The exposure of the hybrid detector of the
-Pierre Auger observatory"]], /Astroparticle Physics 34/.
-
-Pierre Auger Collaboration, 2010. [[http://arxiv.org/abs/1009.1855]["Update on the correlation of the highest
-energy cosmic rays with nearby extragalactic matter"]], /Astroparticle Physics
-34/.
 
 SuperNEMO Collaboration, 2010. [[http://arxiv.org/abs/arXiv:1005.1241]["Probing new physics models of neutrinoless
 double beta decay with SuperNEMO"]], /European Physics Journal C70/.
@@ -71,6 +57,22 @@ radiopurity measurements for the SuperNEMO double beta decay source foils"]],
 SuperNEMO Collaboration, 2010. [[http://arxiv.org/abs/1004.3779]["Spectral modeling of scintillator for the NEMO-3
 and SuperNEMO detectors"]], /Nuclear Instruments and Methods in Physics Research
 A625/.
+
+** Cosmic rays physics
+
+NA61/SHINE Collaboration, 2012. [[http://arxiv.org/abs/arXiv:1112.0150]["Measurement of production properties of
+positively charged kaons in proton-carbon interactions at 31 GeV/c"]], /Physical
+Review C85/.
+
+NA61/SHINE Collaboration, 2011. [[http://arxiv.org/abs/arXiv:1102.0983]["Measurements of cross sections and charged pion
+spectra in proton-carbon interactions at 31 GeV/c"]], /Physical Review C84/.
+
+Pierre Auger Collaboration, 2011. [[http://arxiv.org/abs/arXiv:1010.6162]["The exposure of the hybrid detector of the
+Pierre Auger observatory"]], /Astroparticle Physics 34/.
+
+Pierre Auger Collaboration, 2010. [[http://arxiv.org/abs/1009.1855]["Update on the correlation of the highest
+energy cosmic rays with nearby extragalactic matter"]], /Astroparticle Physics
+34/.
 
 Pierre Auger Collaboration, 2010. [[http://arxiv.org/abs/1111.6764]["Trigger and aperture of the surface detector
 array of the Pierre Auger observatory"]], /Nuclear Instruments and Methods in
