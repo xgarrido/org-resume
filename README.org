@@ -411,6 +411,16 @@ a mix of [[http://kjhealy.github.io/kjh-vita/][Kieran Healy's CV]] with an old o
   \ProvidesPackage{cv_style}[2013/11/06 v0.01 Bundling CV LaTeX style]
 #+END_SRC
 
+**** Package options
+#+BEGIN_SRC latex
+  \RequirePackage{kvoptions}
+  \SetupKeyvalOptions{
+    family=cv,
+    prefix=cv@
+  }
+  \DeclareBoolOption[false]{oldstyle}
+  \ProcessKeyvalOptions*
+#+END_SRC
 **** Default parameter values
 These values can be overloaded within the org file using =#+LATEX_HEADER=
 command.
@@ -490,25 +500,23 @@ Adobe. Inconsolata is used as monospace font.
 #+END_SRC
 
 ***** =section=
-#+BEGIN_SRC latex :tangle no
-  \titleformat{\section} %command
-              {\large\sf\raggedright} %format
-              {} %label
-              {0pt} %sep
-              {} %before
-              [] %after
-              \titlespacing{\section}{0pt}{10pt}{5pt}
-#+END_SRC
-
 #+BEGIN_SRC latex
-  \titleformat{\section} %command
-              [leftmargin] %shape
-              {\footnotesize\bf\sffamily\raggedleft} %format
-              {} %label
-              {0pt} %sep
-              {\lowercase} %before
-              [] %after
-              \titlespacing{\section}{90pt}{10pt}{15pt}
+  \ifthenelse{\boolean{cv@oldstyle}}{
+    \titleformat{\section} %command
+                {\large\sf\raggedright} %format
+                {} %label
+                {0pt} %sep
+                {} %before
+                [\color{blue}\hrule] %after
+                \titlespacing{\section}{0pt}{10pt}{5pt}}{
+    \titleformat{\section} %command
+                [leftmargin] %shape
+                {\footnotesize\bf\sffamily\raggedleft} %format
+                {} %label
+                {0pt} %sep
+                {\lowercase} %before
+                [] %after
+                \titlespacing{\section}{90pt}{10pt}{15pt}}
 #+END_SRC
 
 ***** =subsection=
@@ -519,28 +527,31 @@ Adobe. Inconsolata is used as monospace font.
               {0pt} %sep
               {} %before
               [] %after
-              \titlespacing{\subsection}{0pt}{-5mm}{0pt}
+  \ifthenelse{\boolean{cv@oldstyle}}{}{
+    \titlespacing{\subsection}{-5pt}{15pt}{5pt}}
 #+END_SRC
 
 ***** =itemize=
 #+BEGIN_SRC latex
-  \renewenvironment{itemize}{
-    \begin{list}{\textbullet}{%
-        \setlength{\itemsep}{0.05in}
-        \setlength{\parsep}{0in}
-        \setlength{\parskip}{0in}
-        \setlength{\topsep}{0in}
-        \setlength{\partopsep}{0in}
-        \setlength{\leftmargin}{0.1in}}
-      \vspace{-5mm}}{\end{list}}
-  %%  \renewenvironment{enumerate}{
-  %%    \begin{list}{}{%
-  %%        \setlength{\itemsep}{0.05in}
-  %%        \setlength{\parsep}{0in}
-  %%        \setlength{\parskip}{0in}
-  %%        \setlength{\topsep}{0in}
-  %%        \setlength{\partopsep}{0in}
-  %%        \setlength{\leftmargin}{0.1in}}}{\end{list}}
+  \ifthenelse{\boolean{cv@oldstyle}}{}{
+    \renewenvironment{itemize}{
+      \begin{list}{\textbullet}{%
+          \setlength{\itemsep}{0.05in}
+          \setlength{\parsep}{0in}
+          \setlength{\parskip}{0in}
+          \setlength{\topsep}{0in}
+          \setlength{\partopsep}{0in}
+          \setlength{\leftmargin}{0.1in}}
+        \vspace{-5mm}}{\end{list}}
+    %%  \renewenvironment{enumerate}{
+    %%    \begin{list}{}{%
+    %%        \setlength{\itemsep}{0.05in}
+    %%        \setlength{\parsep}{0in}
+    %%        \setlength{\parskip}{0in}
+    %%        \setlength{\topsep}{0in}
+    %%        \setlength{\partopsep}{0in}
+    %%        \setlength{\leftmargin}{0.1in}}}{\end{list}}
+  }
 #+END_SRC
 
 **** VC status
@@ -582,7 +593,7 @@ Only include one default package and remove all the crapppy stuff included by
                '("cv"
                  "\\documentclass[10pt]{scrartcl}
                   [PACKAGES]
-                  \\usepackage{cv-style}
+                  \\usepackage[oldstyle]{cv-style}
                   [NO-DEFAULT-PACKAGES]"
                  ("\\section{%s}" . "\\section*{%s}")
                  ("\\subsection{%s}" . "\\subsection*{%s}")
