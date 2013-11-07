@@ -420,19 +420,33 @@ command.
   \def\myweb{}
   \def\myphone{+33 (0)1 64 46 84 28}
   \def\myfax{+33 (0)1 69 07 94 04}
-
-  \definecolor{theMainColor}{HTML}{AA0000}
-  \definecolor{theRefColor}{HTML}{000575}
 #+END_SRC
-
+**** Colors
+#+BEGIN_SRC latex
+  \definecolor{red}{RGB}{221,42,43}
+  \definecolor{green}{RGB}{105,182,40}
+  \definecolor{blue}{RGB}{0,51,153}
+  \definecolor{gray}{RGB}{64,64,64}
+  %\definecolor{red}{HTML}{D43F3F}
+  %\definecolor{blue}{HTML}{00ACE9}
+  %\definecolor{green}{HTML}{6A9A1F}
+  \colorlet{theMainColor}{blue}
+  \colorlet{theRefColor}{blue!90}
+  \newcommand{\globalcolor}[1]{%
+    \color{#1}\global\let\default@color\current@color
+  }
+#+END_SRC
 **** Packages
 #+BEGIN_SRC latex
-  \usepackage{titlesec}
-  \usepackage{enumitem}
+  \RequirePackage{titlesec}
+  \RequirePackage{enumitem}
+  \RequirePackage{a4wide}
   \hypersetup{
     xetex,
     colorlinks=true,
     urlcolor=theRefColor,
+    filecolor=theRefColor,
+    linkcolor=theRefColor,
     plainpages=false,
     pdfpagelabels,
     bookmarksnumbered,
@@ -445,16 +459,16 @@ Choose fonts for use with xelatex. Minion and Myriad are widely available, from
 Adobe. Inconsolata is used as monospace font.
 
 #+BEGIN_SRC latex
-  \setromanfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Minion Pro}
+  \setromanfont[Mapping={tex-text},Numbers={OldStyle}]{Minion Pro}
   \setsansfont[Mapping=tex-text,Colour=theMainColor]{Myriad Pro}
   \setmonofont[Mapping=tex-text,Scale=0.9]{Inconsolata}
 #+END_SRC
 **** Document title
 #+BEGIN_SRC latex
   \renewcommand*{\maketitle}{%
-    %%{\flushright\large\textsf{\@author}}\\
+    \globalcolor{gray}
     \begin{minipage}[t]{2.95in}
-      \flushright {\footnotesize \href{http://www.lal.in2p3.fr}{Laboratoire de l'Accélérateur Linéaire}
+      \flushleft {\normalsize\@author\\\footnotesize \href{http://www.lal.in2p3.fr}{Laboratoire de l'Accélérateur Linéaire}
         \\ Building 200, \\ Paris XI University, \\ \vspace{-0.05in} 91898 Orsay Cedex}
     \end{minipage}
     \hfill
@@ -489,18 +503,18 @@ Adobe. Inconsolata is used as monospace font.
 #+BEGIN_SRC latex
   \titleformat{\section} %command
               [leftmargin] %shape
-              {\footnotesize\sf\raggedleft} %format
+              {\footnotesize\bf\sffamily\raggedleft} %format
               {} %label
               {0pt} %sep
               {\lowercase} %before
               [] %after
-              \titlespacing{\section}{90pt}{5pt}{15pt}
+              \titlespacing{\section}{90pt}{10pt}{15pt}
 #+END_SRC
 
 ***** =subsection=
 #+BEGIN_SRC latex
   \titleformat{\subsection} %command
-              {\normalsize\it} %format
+              {\bf\itshape} %format
               {} %label
               {0pt} %sep
               {} %before
@@ -533,9 +547,8 @@ Adobe. Inconsolata is used as monospace font.
 #+NAME: vc-status
 #+BEGIN_SRC sh :results output :tangle no
   if [ -d .git ]; then
-      log=$(LC_MESSAGES=en git --no-pager log -1 HEAD --date=short --pretty=format:"commit \texttt{%h} - %ad")
-      echo "\renewcommand*{\PrelimWords}{\textnormal{\small File under \texttt{git} version control}}"
-      echo "\renewcommand*{\PrelimText}{\textnormal{\small\textcolor{gray}{\PrelimWords\ -- ${log}}}}"
+      log=$(LC_MESSAGES=en git --no-pager log -1 HEAD --date=short --pretty=format:"Last update %ad -- commit \href{https://github.com/xgarrido/org-resume/commit/%H}{\color{gray!50}\texttt{%h}}")
+      echo "\renewcommand*{\PrelimText}{\textnormal{\small\color{gray!50}${log}}}"
   fi
 #+END_SRC
 #+BEGIN_SRC latex :noweb yes
@@ -567,7 +580,7 @@ Only include one default package and remove all the crapppy stuff included by
 
   (add-to-list 'org-latex-classes
                '("cv"
-                 "\\documentclass[10pt]{article}
+                 "\\documentclass[10pt]{scrartcl}
                   [PACKAGES]
                   \\usepackage{cv-style}
                   [NO-DEFAULT-PACKAGES]"
@@ -583,6 +596,7 @@ Only include one default package and remove all the crapppy stuff included by
 #+END_SRC
 
 **** Markup filter
+Remove the quote block
 #+BEGIN_SRC emacs-lisp
   (defun latex::cv-quote-filter (contents backend info)
     (when (eq backend 'latex)
