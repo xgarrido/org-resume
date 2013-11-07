@@ -12,10 +12,12 @@ BATCH=$(EMACS) --batch --no-init-file					\
 
 FILES = resume.org
 
-doc: html pdf
+doc: pdf html
 
 pdf: $(FILES)
+	@mkdir -p pub/html/stylesheets
 	@$(BATCH) --visit "$<" --funcall org-publish-pdf
+	@rm README.el cv-style.sty
 
 html: $(FILES)
 	@mkdir -p pub/html/stylesheets

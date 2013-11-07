@@ -51,7 +51,7 @@ publish the CV into =html= and =pdf=, respectively.
   (unless (boundp 'org-publish-project-alist)
     (setq org-publish-project-alist nil))
 
-  (setq org-publish-timestamp-directory "/tmp/org-timestamps")
+  (setq org-publish-timestamp-directory "/tmp/org-timestamps/")
 
   (setq org-html-style-default "")
   (setq org-html-htmlize-output-type 'css)
@@ -74,7 +74,7 @@ publish the CV into =html= and =pdf=, respectively.
      :html-head-include-scripts nil))
 #+END_SRC
 
-*** CSS stylesheets                                              :noexport:
+*** CSS stylesheets
 **** Main stylesheets
 :PROPERTIES:
 :TANGLE:   pub/html/stylesheets/styles.css
@@ -394,7 +394,221 @@ publish the CV into =html= and =pdf=, respectively.
   }
 #+END_SRC
 
-** Exporter functions
+** PDF export
+*** LaTeX style
+:PROPERTIES:
+:TANGLE: cv-style.sty
+:END:
+
+A homemade style for producing nice looking vitæ with =org-mode=. The main trick
+is to use [[http://mirrors.linsrv.net/tex-archive/macros/latex/contrib/titlesec/][titlesec]] LaTeX package to tweak the title/section/subsection... look
+and thus, use all the hierarchical view of =org-mode=. Then the style itself is
+a mix of [[http://kjhealy.github.io/kjh-vita/][Kieran Healy's CV]] with an old one I had.
+
+**** Basics
+#+BEGIN_SRC latex
+  \NeedsTeXFormat{LaTeX2e}
+  \ProvidesPackage{cv_style}[2013/11/06 v0.01 Bundling CV LaTeX style]
+#+END_SRC
+
+**** Default parameter values
+These values can be overloaded within the org file using =#+LATEX_HEADER=
+command.
+
+#+BEGIN_SRC latex
+  \def\myemail{xavier.garrido@lal.in2p3.fr}
+  \def\myweb{}
+  \def\myphone{+33 (0)1 64 46 84 28}
+  \def\myfax{+33 (0)1 69 07 94 04}
+
+  \definecolor{theMainColor}{HTML}{AA0000}
+  \definecolor{theRefColor}{HTML}{000575}
+#+END_SRC
+
+**** Packages
+#+BEGIN_SRC latex
+  \usepackage{titlesec}
+  \usepackage{enumitem}
+  \hypersetup{
+    xetex,
+    colorlinks=true,
+    urlcolor=theRefColor,
+    plainpages=false,
+    pdfpagelabels,
+    bookmarksnumbered,
+    pagebackref
+  }
+  \setlength{\parindent}{0cm}
+#+END_SRC
+**** Fonts
+Choose fonts for use with xelatex. Minion and Myriad are widely available, from
+Adobe. Inconsolata is used as monospace font.
+
+#+BEGIN_SRC latex
+  \setromanfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Minion Pro}
+  \setsansfont[Mapping=tex-text,Colour=theMainColor]{Myriad Pro}
+  \setmonofont[Mapping=tex-text,Scale=0.9]{Inconsolata}
+#+END_SRC
+**** Document title
+#+BEGIN_SRC latex
+  \renewcommand*{\maketitle}{%
+    %%{\flushright\large\textsf{\@author}}\\
+    \begin{minipage}[t]{2.95in}
+      \flushright {\footnotesize \href{http://www.lal.in2p3.fr}{Laboratoire de l'Accélérateur Linéaire}
+        \\ Building 200, \\ Paris XI University, \\ \vspace{-0.05in} 91898 Orsay Cedex}
+    \end{minipage}
+    \hfill
+    \hfill
+    \begin{minipage}[t]{1.7in}
+      \flushright \footnotesize Phone:~\myphone \\
+      Fax:~\myfax  \\
+      {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}}} \\
+      {\scriptsize  \texttt{\href{\myweb}{\myweb}}}
+    \end{minipage}
+    \vspace{10pt}
+  }
+#+END_SRC
+
+**** Tweaking =\section=
+=titlesec= format respects the following writing convention:
+#+BEGIN_SRC latex :tangle no
+  \titleformat{<command>}{<shape>}{<format>}{<label>}{<sep>}{<before-code>}{<after-code>}
+#+END_SRC
+
+***** =section=
+#+BEGIN_SRC latex :tangle no
+  \titleformat{\section} %command
+              {\large\sf\raggedright} %format
+              {} %label
+              {0pt} %sep
+              {} %before
+              [] %after
+              \titlespacing{\section}{0pt}{10pt}{5pt}
+#+END_SRC
+
+#+BEGIN_SRC latex
+  \titleformat{\section} %command
+              [leftmargin] %shape
+              {\footnotesize\sf\raggedleft} %format
+              {} %label
+              {0pt} %sep
+              {\lowercase} %before
+              [] %after
+              \titlespacing{\section}{90pt}{5pt}{15pt}
+#+END_SRC
+
+***** =subsection=
+#+BEGIN_SRC latex
+  \titleformat{\subsection} %command
+              {\normalsize\it} %format
+              {} %label
+              {0pt} %sep
+              {} %before
+              [] %after
+              \titlespacing{\subsection}{0pt}{-5mm}{0pt}
+#+END_SRC
+
+***** =itemize=
+#+BEGIN_SRC latex
+  \renewenvironment{itemize}{
+    \begin{list}{\textbullet}{%
+        \setlength{\itemsep}{0.05in}
+        \setlength{\parsep}{0in}
+        \setlength{\parskip}{0in}
+        \setlength{\topsep}{0in}
+        \setlength{\partopsep}{0in}
+        \setlength{\leftmargin}{0.1in}}
+      \vspace{-5mm}}{\end{list}}
+  %%  \renewenvironment{enumerate}{
+  %%    \begin{list}{}{%
+  %%        \setlength{\itemsep}{0.05in}
+  %%        \setlength{\parsep}{0in}
+  %%        \setlength{\parskip}{0in}
+  %%        \setlength{\topsep}{0in}
+  %%        \setlength{\partopsep}{0in}
+  %%        \setlength{\leftmargin}{0.1in}}}{\end{list}}
+#+END_SRC
+
+**** VC status
+#+NAME: vc-status
+#+BEGIN_SRC sh :results output :tangle no
+  if [ -d .git ]; then
+      log=$(LC_MESSAGES=en git --no-pager log -1 HEAD --date=short --pretty=format:"commit \texttt{%h} - %ad")
+      echo "\renewcommand*{\PrelimWords}{\textnormal{\small File under \texttt{git} version control}}"
+      echo "\renewcommand*{\PrelimText}{\textnormal{\small\textcolor{gray}{\PrelimWords\ -- ${log}}}}"
+  fi
+#+END_SRC
+#+BEGIN_SRC latex :noweb yes
+  \RequirePackage{prelim2e}
+  <<vc-status()>>
+#+END_SRC
+*** =org= to LaTeX stuff
+**** Use smart quote when exporting
+#+BEGIN_SRC emacs-lisp
+  (setq org-export-with-smart-quotes t)
+#+END_SRC
+**** Keep LaTeX logfiles
+#+BEGIN_SRC emacs-lisp
+  (setq org-latex-remove-logfiles nil)
+#+END_SRC
+
+**** Default list of LaTeX packages
+Only include one default package and remove all the crapppy stuff included by
+=org= \rightarrow =latex= translation.
+
+#+BEGIN_SRC emacs-lisp
+  (add-to-list 'org-latex-packages-alist '("" "org-preamble"))
+#+END_SRC
+
+**** org LaTeX class
+#+BEGIN_SRC emacs-lisp
+  (unless (boundp 'org-latex-classes)
+    (setq org-latex-classes nil))
+
+  (add-to-list 'org-latex-classes
+               '("cv"
+                 "\\documentclass[10pt]{article}
+                  [PACKAGES]
+                  \\usepackage{cv-style}
+                  [NO-DEFAULT-PACKAGES]"
+                 ("\\section{%s}" . "\\section*{%s}")
+                 ("\\subsection{%s}" . "\\subsection*{%s}")
+                 ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                 ("\\paragraph{%s}" . "\\paragraph*{%s}")
+                 ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+#+END_SRC
+**** Set LaTeX command
+#+BEGIN_SRC emacs-lisp
+  (setq org-latex-pdf-process '("latexmk -xelatex -shell-escape -quiet %f"))
+#+END_SRC
+
+**** Markup filter
+#+BEGIN_SRC emacs-lisp
+  (defun latex::cv-quote-filter (contents backend info)
+    (when (eq backend 'latex)
+      (replace-regexp-in-string "." "" contents)))
+  (add-to-list 'org-export-filter-quote-block-functions
+               'latex::cv-quote-filter)
+#+END_SRC
+
+*** Project definition
+#+BEGIN_SRC emacs-lisp
+  (add-to-list
+   'org-publish-project-alist
+   `("publish-pdf-cv"
+     :base-directory ,this-directory
+     :base-extension "org"
+     :publishing-directory ,(expand-file-name "pdf" pub-directory)
+     :publishing-function org-latex-publish-to-pdf
+     :exclude ".*publish.*.org\\|README.org"
+     :section-numbers 2
+     :with-toc        t
+     :latex-class "cv"
+     :latex-header-extra ""
+     ))
+#+END_SRC
+
+* Exporter functions
 #+BEGIN_SRC emacs-lisp
   (defun org-publish-html ()
     (progn
@@ -408,6 +622,6 @@ publish the CV into =html= and =pdf=, respectively.
   (defun org-publish-pdf ()
     (progn
       (org-publish-project "publish-pdf-cv" 'force)
-      (shell-command "mkdir -p pub/latex.d && mv *.{tex,auxlock,toc,out,fls,aux,pdf,log,fdb_latexmk,sty} pub/latex.d/.")
+      (shell-command "mv ./latex.d pub/pdf/.; mv -f resume.* ./pub/pdf/latex.d/.; mv ./pub/pdf/latex.d/resume.org .")
       ))
 #+END_SRC
