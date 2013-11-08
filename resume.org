@@ -4,10 +4,10 @@
 #+OPTIONS: toc:nil num:nil
 
 #+BEGIN_QUOTE
-I am an associate professor at the University of Paris-South, doing my research
+I'm an associate professor at the University of Paris-South, doing my research
 application at the Laboratoire de l'Accélérateur Linéaire.
 
-I am interested in neutrino physics, looking for Majorana neutrino and thus
+I'm interested in neutrino physics, looking for Majorana neutrino and thus
 searching for neutrinoless double-beta decay. I also contribute to and maintain
 some open source projects on [[https://github.com/xgarrido][GitHub]].
 #+END_QUOTE

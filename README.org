@@ -81,6 +81,7 @@ publish the CV into =html= and =pdf=, respectively.
 :END:
 ***** Google fonts
 #+BEGIN_SRC css
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans);
   @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
   @import url(https://fonts.googleapis.com/css?family=Inconsolata);
 #+END_SRC
@@ -91,8 +92,10 @@ publish the CV into =html= and =pdf=, respectively.
   body {
       width:800px;
       margin:50px auto;
-      font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      color:#777;
+      /*font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+      font-family: "Open Sans", sans-serif;
+      font-size: 12px;
+      color:#777777;
       font-weight:300;
   }
 #+END_SRC
@@ -110,7 +113,7 @@ publish the CV into =html= and =pdf=, respectively.
 
   h1 {
       font-family:Lobster;
-      text-shadow: 0 0 2px #777;
+      text-shadow: 0 0 2px #777777;
       font-size: 48px;
       display: none;
   }
@@ -123,24 +126,24 @@ publish the CV into =html= and =pdf=, respectively.
 ****** Link
 #+BEGIN_SRC css
   a {
-      color:#39c;
+      color:#67ad00; /*#3399cc;*/
       font-weight:400;
       text-decoration:none;
   }
 
   a:hover {
-      color:#069;
+      color:#7fd600; /*#006699;*/
   }
 
   a small {
       font-size:11px;
-      color:#777;
+      color:#777777;
       margin-top:-0.6em;
       display:block;
   }
 
   a:hover small {
-      color:#777;
+      color:#777777;
   }
 #+END_SRC
 
@@ -493,7 +496,7 @@ Adobe. Inconsolata is used as monospace font.
   }
 #+END_SRC
 
-**** Tweaking =\section=
+**** Tweaking sections & lists
 =titlesec= format respects the following writing convention:
 #+BEGIN_SRC latex :tangle no
   \titleformat{<command>}{<shape>}{<format>}{<label>}{<sep>}{<before-code>}{<after-code>}
@@ -504,7 +507,7 @@ Adobe. Inconsolata is used as monospace font.
   \ifthenelse{\boolean{cv@oldstyle}}{
     \titleformat{\section}[block] %command
                 {\usekomafont{sectioning}\usekomafont{section}%
-                  \tikz[overlay] \shade[left color=blue,right color=white] (0,-0.7ex) rectangle (\textwidth,-0.8ex);}%} %format
+                  \tikz[overlay] \shade[left color=white,right color=blue] (0,-0.7ex) rectangle (\textwidth,-0.8ex);}%} %format
                 {\thesection} %label
                 {1em} %sep
                 {} %before
@@ -594,7 +597,7 @@ Only include one default package and remove all the crapppy stuff included by
                '("cv"
                  "\\documentclass[10pt]{scrartcl}
                   [PACKAGES]
-                  \\usepackage[oldstyle]{cv-style}
+                  \\usepackage[]{cv-style}
                   [NO-DEFAULT-PACKAGES]"
                  ("\\section{%s}" . "\\section*{%s}")
                  ("\\subsection{%s}" . "\\subsection*{%s}")
