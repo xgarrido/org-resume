@@ -502,12 +502,13 @@ Adobe. Inconsolata is used as monospace font.
 ***** =section=
 #+BEGIN_SRC latex
   \ifthenelse{\boolean{cv@oldstyle}}{
-    \titleformat{\section} %command
-                {\large\sf\raggedright} %format
-                {} %label
-                {0pt} %sep
+    \titleformat{\section}[block] %command
+                {\usekomafont{sectioning}\usekomafont{section}%
+                  \tikz[overlay] \shade[left color=blue,right color=white] (0,-0.7ex) rectangle (\textwidth,-0.8ex);}%} %format
+                {\thesection} %label
+                {1em} %sep
                 {} %before
-                [\color{blue}\hrule] %after
+                [] %after
                 \titlespacing{\section}{0pt}{10pt}{5pt}}{
     \titleformat{\section} %command
                 [leftmargin] %shape
@@ -647,6 +648,6 @@ Remove the quote block
   (defun org-publish-pdf ()
     (progn
       (org-publish-project "publish-pdf-cv" 'force)
-      (shell-command "mv ./latex.d pub/pdf/.; mv -f resume.* ./pub/pdf/latex.d/.; mv ./pub/pdf/latex.d/resume.org .")
+      (shell-command "mv ./latex.d pub/pdf/.; mv -f resume.* *.sty ./pub/pdf/latex.d/.; mv ./pub/pdf/latex.d/resume.org .")
       ))
 #+END_SRC

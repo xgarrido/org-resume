@@ -17,7 +17,7 @@ doc: pdf html
 pdf: $(FILES)
 	@mkdir -p pub/html/stylesheets
 	@$(BATCH) --visit "$<" --funcall org-publish-pdf
-	@rm README.el cv-style.sty
+	@rm README.el
 
 html: $(FILES)
 	@mkdir -p pub/html/stylesheets
