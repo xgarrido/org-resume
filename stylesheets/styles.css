@@ -1,11 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 @import url(https://fonts.googleapis.com/css?family=Inconsolata);
 
 body {
     width:800px;
     margin:50px auto;
-    font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color:#777;
+    /*font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    color:#777777;
     font-weight:300;
 }
 
@@ -20,7 +23,7 @@ h1, h2, h3 {
 
 h1 {
     font-family:Lobster;
-    text-shadow: 0 0 2px #777;
+    text-shadow: 0 0 2px #777777;
     font-size: 48px;
     display: none;
 }
@@ -30,24 +33,24 @@ h3, h4, h5, h6 {
 }
 
 a {
-    color:#39c;
+    color:#67ad00; /*#3399cc;*/
     font-weight:400;
     text-decoration:none;
 }
 
 a:hover {
-    color:#069;
+    color:#7fd600; /*#006699;*/
 }
 
 a small {
     font-size:11px;
-    color:#777;
+    color:#777777;
     margin-top:-0.6em;
     display:block;
 }
 
 a:hover small {
-    color:#777;
+    color:#777777;
 }
 
 p, ul, ol, table, pre, dl {
