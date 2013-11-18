@@ -22,9 +22,6 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-family:Lobster;
-    text-shadow: 0 0 2px #777777;
-    font-size: 48px;
     display: none;
 }
 
@@ -33,13 +30,13 @@ h3, h4, h5, h6 {
 }
 
 a {
-    color:#67ad00; /*#3399cc;*/
+    color: #3399cc; /*#67ad00;*/
     font-weight:400;
     text-decoration:none;
 }
 
 a:hover {
-    color:#7fd600; /*#006699;*/
+    color:#006699; /*#7fd600;*/
 }
 
 a small {
