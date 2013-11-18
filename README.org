@@ -39,8 +39,8 @@ publish the CV into =html= and =pdf=, respectively.
   preamble+='<div id=\"contact\">'
   preamble+='<span class=\"name\">&nbsp;</span><br>'
   preamble+='(33) 1 64 46 84 28<br>'
-  # preamble+='<a href=\"http://dan.iel.fm\">dan.iel.fm</a><br>'
-  preamble+='<a href=\"mailto:garrido@lal.in2p3.fr\">garrido@lal.in2p3.fr</a>'
+  preamble+='<a href=\"http://xgarrido.github.io\">xgarrido.github.io</a><br>'
+  preamble+='<a href=\"mailto:garrido@lal.in2p3.fr\">xavier.garrido@lal.in2p3.fr</a>'
   preamble+='</div>'
   echo -ne $preamble
 #+END_SRC
@@ -112,9 +112,6 @@ publish the CV into =html= and =pdf=, respectively.
   }
 
   h1 {
-      font-family:Lobster;
-      text-shadow: 0 0 2px #777777;
-      font-size: 48px;
       display: none;
   }
 
@@ -126,13 +123,13 @@ publish the CV into =html= and =pdf=, respectively.
 ****** Link
 #+BEGIN_SRC css
   a {
-      color:#67ad00; /*#3399cc;*/
+      color: #3399cc; /*#67ad00;*/
       font-weight:400;
       text-decoration:none;
   }
 
   a:hover {
-      color:#7fd600; /*#006699;*/
+      color:#006699; /*#7fd600;*/
   }
 
   a small {

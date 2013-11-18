@@ -5,7 +5,7 @@
 
 #+BEGIN_QUOTE
 I'm an associate professor at the University of Paris-South, doing my research
-application at the Laboratoire de l'Accélérateur Linéaire.
+application at the Linear Accelerator Laboratory.
 
 I'm interested in neutrino physics, looking for Majorana neutrino and thus
 searching for neutrinoless double-beta decay. I also contribute to and maintain
