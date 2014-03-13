@@ -43,6 +43,10 @@ Master of Astrophysics at the University of Paris-South, France, 2003--2005
 
 ** Neutrino physics
 
+NEMO3 Collaboration, 2014. [[http://arxiv.org/abs/1402.7196]["Investigation of
+double beta decay of\nbsp^{100}Mo to excited states of\nbsp^{100}Ru"]], /Nuclear
+Physics A925/.
+
 NEMO3 Collaboration, 2011. [[http://arxiv.org/abs/arXiv:1104.3716]["Measurement of the double beta decay half-life of
 \nbsp^{130}Te with the NEMO-3 detector"]], /Physical Review Letters 107/.
 
