@@ -25,7 +25,7 @@ publish the CV into =html= and =pdf=, respectively.
 #+NAME: html-postamble
 #+BEGIN_SRC sh :tangle no :results output
   if [ -d .git ]; then
-      LC_MESSAGES=en git --no-pager log -1 HEAD --date=short --pretty=format:'Last update %ad - commit <a href=https://github.com/xgarrido/org-resume/commit/%H>%h</a>'
+      LC_MESSAGES=en git --no-pager log -1 HEAD --date=short --pretty=format:'commit <a href=https://github.com/xgarrido/org-resume/commit/%H>%h</a> - %ad'
   fi
 #+END_SRC
 *** Building html preamble
@@ -559,7 +559,7 @@ Adobe. Inconsolata is used as monospace font.
 #+NAME: vc-status
 #+BEGIN_SRC sh :results output :tangle no
   if [ -d .git ]; then
-      log=$(LC_MESSAGES=en git --no-pager log -1 HEAD --date=short --pretty=format:"Last update %ad -- commit \href{https://github.com/xgarrido/org-resume/commit/%H}{\color{gray!50}\texttt{%h}}")
+      log=$(LC_MESSAGES=en git --no-pager log -1 HEAD --date=short --pretty=format:"commit \href{https://github.com/xgarrido/org-resume/commit/%H}{\color{gray!50}\texttt{%h}} -- %ad")
       echo "\renewcommand*{\PrelimText}{\textnormal{\small\color{gray!50}${log}}}"
   fi
 #+END_SRC
