@@ -396,22 +396,229 @@ publish the CV into =html= and =pdf=, respectively.
 
 ** PDF export
 *** LaTeX style
-:PROPERTIES:
-:TANGLE: cv-style.sty
-:END:
 
 A homemade style for producing nice looking vitæ with =org-mode=. The main trick
 is to use [[http://mirrors.linsrv.net/tex-archive/macros/latex/contrib/titlesec/][titlesec]] LaTeX package to tweak the title/section/subsection... look
 and thus, use all the hierarchical view of =org-mode=. Then the style itself is
 a mix of [[http://kjhealy.github.io/kjh-vita/][Kieran Healy's CV]] with an old one I had.
+**** =org= preamble
+:PROPERTIES:
+:TANGLE: org-preamble.sty
+:END:
 
-**** Basics
+This section defines =org= preamble and settings for documents exported from
+=.org= to =.tex= files. The basic use is to add =\usepackage{org-preamble}= in
+your LaTeX document.
+
+***** Basics
+#+BEGIN_SRC latex
+  \NeedsTeXFormat{LaTeX2e}
+  \ProvidesPackage{org-preamble}[2013/03/03 v0.01 Bundling of Preamble items for Org to LaTeX export]
+#+END_SRC
+
+***** Style options
+Options can be passed to =org-preamble= style file within =\usepackage[options]=
+call. For the time being, I have only copied/pasted how to declare such options
+but do not use it.
+#+BEGIN_SRC latex :tangle no
+  \RequirePackage{ifthen}
+  \newboolean{@fr} %
+  \setboolean{@fr}{false} %
+  \DeclareOption{fr}{
+    \setboolean{@fr}{true}
+  }
+  \ProcessOptions
+#+END_SRC
+
+***** Packages requirements
+****** AMS packages
+#+BEGIN_SRC latex
+  \RequirePackage{amsmath,amssymb}
+#+END_SRC
+****** Listings package
+[[https://code.google.com/p/minted/][minted]] is a package that facilitates expressive syntax highlighting in LaTeX
+using the powerful Pygments library. The package also provides options to
+customize the highlighted source code output using =fancyvrb=.
+#+BEGIN_SRC latex
+  \RequirePackage[cache]{minted}
+#+END_SRC
+
+****** Unicode typesettings aka XeTeX
+#+BEGIN_SRC latex
+  \RequirePackage{ifxetex}
+  \ifxetex
+  \RequirePackage{fontspec}
+  \RequirePackage{xunicode}
+  %%\else
+  \fi
+#+END_SRC
+
+****** hyperref package
+#+BEGIN_SRC latex
+  \RequirePackage{hyperref}
+#+END_SRC
+****** [[http://www.ctan.org/pkg/pifont][pifont]] package
+#+BEGIN_SRC latex
+  \RequirePackage{pifont}
+#+END_SRC
+****** graphics package
+#+BEGIN_SRC latex
+  \RequirePackage{wrapfig}
+  \RequirePackage{graphicx}
+  \graphicspath{
+    {./plot/}
+    {./figures/}
+  }
+#+END_SRC
+****** comment package
+#+BEGIN_SRC latex
+  \RequirePackage{comment}
+#+END_SRC
+****** [[http://www.texample.net/tikz/][tikz]] package
+#+BEGIN_SRC latex
+  \RequirePackage{tikz}
+  \usetikzlibrary{positioning,arrows,decorations,backgrounds,patterns,matrix,shapes,fit,calc,shadows,plotmarks,spy,trees}
+#+END_SRC
+
+We use the external library from =tikz= to cache i.e. produce a =pdf= file of
+each =tikzpicture=. =tikz/external= looks if the pdf exist and if not, export it.
+#+BEGIN_SRC latex
+  %%\tikzset{
+  %%  external/system call={%
+  %%    xelatex -shell-escape
+  %%    -halt-on-error -interaction=batchmode
+  %%    -jobname "\image" "\texsource"}}
+  %%\tikzexternalize[prefix=latex.d/]
+  \input "|mkdir -p latex.d"
+  \input "|mkdir -p /tmp/latex.d"
+#+END_SRC
+****** pgfplot package
+#+BEGIN_SRC latex
+  \RequirePackage{pgfplots}
+#+END_SRC
+****** rotating package
+This since to be needed if =sidewaystable= are used
+#+BEGIN_SRC latex
+  \RequirePackage{rotating}
+#+END_SRC
+
+****** Bold math package
+#+BEGIN_SRC latex
+  \RequirePackage{bm}
+#+END_SRC
+****** =multirow=
+#+BEGIN_SRC latex
+  \RequirePackage{multirow}
+#+END_SRC
+****** units package
+#+BEGIN_SRC latex
+  \RequirePackage{units}
+#+END_SRC
+****** xspace package
+#+BEGIN_SRC latex
+  \RequirePackage{xspace}
+#+END_SRC
+
+****** array package
+#+BEGIN_SRC latex
+  \RequirePackage{array}
+  \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+  \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+  \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+#+END_SRC
+
+****** underline package
+#+BEGIN_SRC latex
+  \RequirePackage[normalem]{ulem}
+#+END_SRC
+****** cancel package
+This package allows to cancel a number in LaTeX math mode
+#+BEGIN_SRC latex
+  \RequirePackage{cancel}
+#+END_SRC
+****** =relsize=
+#+BEGIN_SRC latex
+  \RequirePackage{relsize}
+#+END_SRC
+****** Font Awesome
+#+BEGIN_SRC latex
+  \newfontfamily{\FA}{FontAwesome}
+  \newcommand*{\faicon}[1]{{\FA\csname faicon@#1\endcsname}}
+  \expandafter\def\csname faicon@github-alt\endcsname{\symbol{"F113}}\def\faGithubAlt{{\FA\csname faicon@github-alt\endcsname}\xspace}
+  \expandafter\def\csname faicon@external-link\endcsname{\symbol{"F08E}}\def\faExternalLink{{\FA\csname faicon@external-link\endcsname}\xspace}
+#+END_SRC
+****** =fixltx2e= package
+Following this [[http://tex.stackexchange.com/questions/74114/dont-work-with-toc][discussion]], the use of =\(\)= sithin section is not /robust/.
+#+BEGIN_SRC latex
+  %%\RequirePackage{fixltx2e}
+#+END_SRC
+***** Email handling
+#+BEGIN_SRC latex
+  \let\@email\@empty
+  \@ifundefined{email}{%
+    \newcommand\email[1]{\gdef\@email{#1}}}{}
+#+END_SRC
+***** Generic new environment
+****** Remark
+#+BEGIN_SRC latex
+  \newenvironment{remark}
+                 {\begin{quote}\ding{47}\itshape\small}
+                 {\end{quote}}
+#+END_SRC
+****** Prompt
+#+BEGIN_SRC latex
+  \newenvironment{prompt}
+                 {\begin{quote}\color{blue!75}\tt\$\;}
+                 {\end{quote}}
+#+END_SRC
+****** Bibliography
+#+BEGIN_SRC latex
+  \renewenvironment{bibliography}{%
+    \small
+    \@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
+    \list{\@biblabel{\@arabic\c@enumiv}}%
+         {\settowidth\labelwidth{\@biblabel{9}}%
+           \leftmargin\labelwidth
+           \advance\leftmargin\labelsep
+           \@openbib@code
+           \usecounter{enumiv}%
+           \let\p@enumiv\@empty
+           \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+         \sloppy
+         \clubpenalty4000
+         \@clubpenalty \clubpenalty
+         \widowpenalty4000%
+         \sfcode`\.\@m}{%
+    \def\@noitemerr
+        {\@latex@warning{Empty `thebibliography' environment}}%
+        \endlist}
+#+END_SRC
+
+***** New commands
+****** Clearing odd pages
+#+BEGIN_SRC latex
+  \RequirePackage{changepage}
+  \newcommand\clearemptydoublepage{%
+    \checkoddpage
+    \ifthenelse{\boolean{oddpage}}%
+               {\null\clearpage\thispagestyle{empty} \null \clearpage}%
+               {\null\clearpage}%
+  }
+  %%\newcommand{\clearemptydoublepage}{\newpage{\cleardoubleemptypage\thispagestyle{empty}}
+#+END_SRC
+
+**** CV style
+:PROPERTIES:
+:TANGLE: cv-style.sty
+:END:
+
+***** Basics
 #+BEGIN_SRC latex
   \NeedsTeXFormat{LaTeX2e}
   \ProvidesPackage{cv_style}[2013/11/06 v0.01 Bundling CV LaTeX style]
 #+END_SRC
 
-**** Package options
+***** Package options
 #+BEGIN_SRC latex
   \RequirePackage{kvoptions}
   \SetupKeyvalOptions{
@@ -421,7 +628,7 @@ a mix of [[http://kjhealy.github.io/kjh-vita/][Kieran Healy's CV]] with an old o
   \DeclareBoolOption[false]{oldstyle}
   \ProcessKeyvalOptions*
 #+END_SRC
-**** Default parameter values
+***** Default parameter values
 These values can be overloaded within the org file using =#+LATEX_HEADER=
 command.
 
@@ -431,7 +638,7 @@ command.
   \def\myphone{+33 (0)1 64 46 84 28}
   \def\myfax{+33 (0)1 69 07 94 04}
 #+END_SRC
-**** Colors
+***** Colors
 #+BEGIN_SRC latex
   \definecolor{red}{RGB}{221,42,43}
   \definecolor{green}{RGB}{105,182,40}
@@ -446,7 +653,7 @@ command.
     \color{#1}\global\let\default@color\current@color
   }
 #+END_SRC
-**** Packages
+***** Packages
 #+BEGIN_SRC latex
   \RequirePackage{titlesec}
   \RequirePackage{enumitem}
@@ -464,7 +671,7 @@ command.
   }
   \setlength{\parindent}{0cm}
 #+END_SRC
-**** Fonts
+***** Fonts
 Choose fonts for use with xelatex. Minion and Myriad are widely available, from
 Adobe. Inconsolata is used as monospace font.
 
@@ -473,7 +680,7 @@ Adobe. Inconsolata is used as monospace font.
   \setsansfont[Mapping=tex-text,Colour=theMainColor]{Myriad Pro}
   \setmonofont[Mapping=tex-text,Scale=0.9]{Inconsolata}
 #+END_SRC
-**** Document title
+***** Document title
 #+BEGIN_SRC latex
   \renewcommand*{\maketitle}{%
     \globalcolor{gray}
@@ -493,13 +700,13 @@ Adobe. Inconsolata is used as monospace font.
   }
 #+END_SRC
 
-**** Tweaking sections & lists
+***** Tweaking sections & lists
 =titlesec= format respects the following writing convention:
 #+BEGIN_SRC latex :tangle no
   \titleformat{<command>}{<shape>}{<format>}{<label>}{<sep>}{<before-code>}{<after-code>}
 #+END_SRC
 
-***** =section=
+****** =section=
 #+BEGIN_SRC latex
   \ifthenelse{\boolean{cv@oldstyle}}{
     \titleformat{\section}[block] %command
@@ -520,7 +727,7 @@ Adobe. Inconsolata is used as monospace font.
                 \titlespacing{\section}{90pt}{10pt}{15pt}}
 #+END_SRC
 
-***** =subsection=
+****** =subsection=
 #+BEGIN_SRC latex
   \titleformat{\subsection} %command
               {\bf\itshape} %format
@@ -532,7 +739,7 @@ Adobe. Inconsolata is used as monospace font.
     \titlespacing{\subsection}{-5pt}{15pt}{5pt}}
 #+END_SRC
 
-***** =itemize=
+****** =itemize=
 #+BEGIN_SRC latex
   \ifthenelse{\boolean{cv@oldstyle}}{}{
     \renewenvironment{itemize}{
@@ -555,7 +762,7 @@ Adobe. Inconsolata is used as monospace font.
   }
 #+END_SRC
 
-**** VC status
+***** VC status
 #+NAME: vc-status
 #+BEGIN_SRC sh :results output :tangle no
   if [ -d .git ]; then
@@ -585,7 +792,7 @@ Only include one default package and remove all the crapppy stuff included by
   (add-to-list 'org-latex-packages-alist '("" "org-preamble"))
 #+END_SRC
 
-**** org LaTeX class
+**** =org= LaTeX class
 #+BEGIN_SRC emacs-lisp
   (unless (boundp 'org-latex-classes)
     (setq org-latex-classes nil))
