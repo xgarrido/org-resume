@@ -461,15 +461,6 @@ customize the highlighted source code output using =fancyvrb=.
 #+BEGIN_SRC latex
   \RequirePackage{pifont}
 #+END_SRC
-****** graphics package
-#+BEGIN_SRC latex
-  \RequirePackage{wrapfig}
-  \RequirePackage{graphicx}
-  \graphicspath{
-    {./plot/}
-    {./figures/}
-  }
-#+END_SRC
 ****** comment package
 #+BEGIN_SRC latex
   \RequirePackage{comment}
@@ -492,49 +483,14 @@ each =tikzpicture=. =tikz/external= looks if the pdf exist and if not, export it
   \input "|mkdir -p latex.d"
   \input "|mkdir -p /tmp/latex.d"
 #+END_SRC
-****** pgfplot package
-#+BEGIN_SRC latex
-  \RequirePackage{pgfplots}
-#+END_SRC
-****** rotating package
-This since to be needed if =sidewaystable= are used
-#+BEGIN_SRC latex
-  \RequirePackage{rotating}
-#+END_SRC
-
-****** Bold math package
-#+BEGIN_SRC latex
-  \RequirePackage{bm}
-#+END_SRC
-****** =multirow=
-#+BEGIN_SRC latex
-  \RequirePackage{multirow}
-#+END_SRC
-****** units package
-#+BEGIN_SRC latex
-  \RequirePackage{units}
-#+END_SRC
 ****** xspace package
 #+BEGIN_SRC latex
   \RequirePackage{xspace}
 #+END_SRC
 
-****** array package
-#+BEGIN_SRC latex
-  \RequirePackage{array}
-  \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-  \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-  \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-#+END_SRC
-
 ****** underline package
 #+BEGIN_SRC latex
   \RequirePackage[normalem]{ulem}
-#+END_SRC
-****** cancel package
-This package allows to cancel a number in LaTeX math mode
-#+BEGIN_SRC latex
-  \RequirePackage{cancel}
 #+END_SRC
 ****** =relsize=
 #+BEGIN_SRC latex
@@ -546,11 +502,6 @@ This package allows to cancel a number in LaTeX math mode
   \newcommand*{\faicon}[1]{{\FA\csname faicon@#1\endcsname}}
   \expandafter\def\csname faicon@github-alt\endcsname{\symbol{"F113}}\def\faGithubAlt{{\FA\csname faicon@github-alt\endcsname}\xspace}
   \expandafter\def\csname faicon@external-link\endcsname{\symbol{"F08E}}\def\faExternalLink{{\FA\csname faicon@external-link\endcsname}\xspace}
-#+END_SRC
-****** =fixltx2e= package
-Following this [[http://tex.stackexchange.com/questions/74114/dont-work-with-toc][discussion]], the use of =\(\)= sithin section is not /robust/.
-#+BEGIN_SRC latex
-  %%\RequirePackage{fixltx2e}
 #+END_SRC
 ***** Email handling
 #+BEGIN_SRC latex
