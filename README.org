@@ -509,42 +509,6 @@ each =tikzpicture=. =tikz/external= looks if the pdf exist and if not, export it
   \@ifundefined{email}{%
     \newcommand\email[1]{\gdef\@email{#1}}}{}
 #+END_SRC
-***** Generic new environment
-****** Remark
-#+BEGIN_SRC latex
-  \newenvironment{remark}
-                 {\begin{quote}\ding{47}\itshape\small}
-                 {\end{quote}}
-#+END_SRC
-****** Prompt
-#+BEGIN_SRC latex
-  \newenvironment{prompt}
-                 {\begin{quote}\color{blue!75}\tt\$\;}
-                 {\end{quote}}
-#+END_SRC
-****** Bibliography
-#+BEGIN_SRC latex
-  \renewenvironment{bibliography}{%
-    \small
-    \@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
-    \list{\@biblabel{\@arabic\c@enumiv}}%
-         {\settowidth\labelwidth{\@biblabel{9}}%
-           \leftmargin\labelwidth
-           \advance\leftmargin\labelsep
-           \@openbib@code
-           \usecounter{enumiv}%
-           \let\p@enumiv\@empty
-           \renewcommand\theenumiv{\@arabic\c@enumiv}}%
-         \sloppy
-         \clubpenalty4000
-         \@clubpenalty \clubpenalty
-         \widowpenalty4000%
-         \sfcode`\.\@m}{%
-    \def\@noitemerr
-        {\@latex@warning{Empty `thebibliography' environment}}%
-        \endlist}
-#+END_SRC
-
 ***** New commands
 ****** Clearing odd pages
 #+BEGIN_SRC latex
