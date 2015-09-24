@@ -42,6 +42,10 @@ Master of Astrophysics at the University of Paris-South, France, 2003--2005
 * Publications
 
 ** Neutrino physics
+NEMO3 Collaboration, 2015. [[http://arxiv.org/abs/1506.05825][Result of the
+search for neutrinoless double-beta decay in\nbsp^{100}Mo with the NEMO-3
+experiment]], /Physical Review D92/.
+
 NEMO3 Collaboration, 2014. [[http://arxiv.org/abs/1311.5695]["Search for neutrinoless double-beta decay
 of\nbsp^{100}Mo with the NEMO-3 detector"]], /Physical Review D89/.
 
