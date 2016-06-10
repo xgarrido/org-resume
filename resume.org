@@ -42,16 +42,19 @@ Master of Astrophysics at the University of Paris-South, France, 2003--2005
 * Publications
 
 ** Neutrino physics
-NEMO3 Collaboration, 2015. [[http://arxiv.org/abs/1506.05825][Result of the
-search for neutrinoless double-beta decay in\nbsp^{100}Mo with the NEMO-3
-experiment]], /Physical Review D92/.
+NEMO3 Collaboration, 2016. [[http://arxiv.org/abs/1604.01710]["Measurement of the Double-Beta Decay Half-Life and
+Search for the Neutrinoless Double-Beta Decay of\nbsp^{48}Ca with the NEMO-3
+Detector"]], Physical Review D93.
 
-NEMO3 Collaboration, 2014. [[http://arxiv.org/abs/1311.5695]["Search for neutrinoless double-beta decay
-of\nbsp^{100}Mo with the NEMO-3 detector"]], /Physical Review D89/.
+NEMO3 Collaboration, 2015. [[http://arxiv.org/abs/1506.05825]["Result of the search for neutrinoless double-beta
+decay in\nbsp^{100}Mo with the NEMO-3 experiment"]], /Physical Review D92/.
 
-NEMO3 Collaboration, 2014. [[http://arxiv.org/abs/1402.7196]["Investigation of
-double beta decay of\nbsp^{100}Mo to excited states of\nbsp^{100}Ru"]], /Nuclear
-Physics A925/.
+NEMO3 Collaboration, 2014. [[http://arxiv.org/abs/1311.5695]["Search for
+neutrinoless double-beta decay of\nbsp^{100}Mo with the NEMO-3 detector"]],
+/Physical Review D89/.
+
+NEMO3 Collaboration, 2014. [[http://arxiv.org/abs/1402.7196]["Investigation of double beta decay of\nbsp^{100}Mo
+to excited states of\nbsp^{100}Ru"]], /Nuclear Physics A925/.
 
 NEMO3 Collaboration, 2011. [[http://arxiv.org/abs/arXiv:1104.3716]["Measurement of the double beta decay half-life of
 \nbsp^{130}Te with the NEMO-3 detector"]], /Physical Review Letters 107/.
