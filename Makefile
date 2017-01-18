@@ -4,7 +4,7 @@ EMACS=emacs
 BATCH=$(EMACS) --batch --no-init-file					\
   --eval '(require (quote org))'					\
   --eval "(org-babel-do-load-languages 'org-babel-load-languages	\
-         '((sh . t)))"							\
+         '((shell . t)))"   						\
   --eval "(setq org-confirm-babel-evaluate nil)"			\
   --eval '(setq starter-kit-dir default-directory)'			\
   --eval '(org-babel-tangle-file "README.org")'	              		\

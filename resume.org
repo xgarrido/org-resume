@@ -45,7 +45,7 @@ Master of Astrophysics at the University of Paris-South, France, 2003--2005
 ** Neutrino physics
 
 NEMO3 Collaboration, 2017. [[https://arxiv.org/abs/1610.03226][Measurement of
-the 2\nu\beta\beta decay half-life and search for the 0\nu\beta\beta decay of ^{116}Cd with the
+the 2\nu\beta\beta decay half-life and search for the 0\nu\beta\beta decay of\nbsp^{116}Cd with the
 NEMO-3 detector]], Physical Review D95.
 
 NEMO3 Collaboration, 2016. [[https://arxiv.org/abs/1606.08494]["Measurement of

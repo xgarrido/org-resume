@@ -23,14 +23,14 @@ publish the CV into =html= and =pdf=, respectively.
 #+END_SRC
 *** Building html postamble
 #+NAME: html-postamble
-#+BEGIN_SRC sh :tangle no :results output
+#+BEGIN_SRC shell :tangle no :results output
   if [ -d .git ]; then
       LC_MESSAGES=en git --no-pager log -1 HEAD --date=short --pretty=format:'commit <a href=https://github.com/xgarrido/org-resume/commit/%H>%h</a> - %ad'
   fi
 #+END_SRC
 *** Building html preamble
 #+NAME: html-preamble
-#+BEGIN_SRC sh :tangle no :results output
+#+BEGIN_SRC shell :tangle no :results output
   preamble+='<div id=\"address\">'
   preamble+='<span class=\"name\">Xavier Garrido</span><br>'
   preamble+='<a href=\"http://www.lal.in2p3.fr\">Laboratoire de l'"'"'Accélérateur Linéaire</a><br>'
@@ -77,7 +77,7 @@ publish the CV into =html= and =pdf=, respectively.
 *** CSS stylesheets
 **** Main stylesheets
 :PROPERTIES:
-:TANGLE:   pub/html/stylesheets/styles.css
+:HEADER-ARGS: :tangle pub/html/stylesheets/styles.css
 :END:
 ***** Google fonts
 #+BEGIN_SRC css
@@ -363,7 +363,7 @@ publish the CV into =html= and =pdf=, respectively.
 
 **** Org source code styles
 :PROPERTIES:
-:TANGLE: pub/html/stylesheets/org-pygments.css
+:HEADER-ARGS: :tangle pub/html/stylesheets/org-pygments.css
 :END:
 
 #+BEGIN_SRC css
@@ -403,7 +403,7 @@ and thus, use all the hierarchical view of =org-mode=. Then the style itself is
 a mix of [[http://kjhealy.github.io/kjh-vita/][Kieran Healy's CV]] with an old one I had.
 **** =org= preamble
 :PROPERTIES:
-:TANGLE: org-preamble.sty
+:HEADER-ARGS: :tangle org-preamble.sty
 :END:
 
 This section defines =org= preamble and settings for documents exported from
@@ -524,7 +524,7 @@ each =tikzpicture=. =tikz/external= looks if the pdf exist and if not, export it
 
 **** CV style
 :PROPERTIES:
-:TANGLE: cv-style.sty
+:HEADER-ARGS: :tangle cv-style.sty
 :END:
 
 ***** Basics
