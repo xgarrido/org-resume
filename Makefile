@@ -10,17 +10,19 @@ BATCH=$(EMACS) --batch --no-init-file					\
   --eval '(org-babel-tangle-file "README.org")'	              		\
   --eval '(org-babel-load-file   "README.org")'
 
-FILES = resume.org
+files_org  = $(wildcard resume*.org)
+files_pdf  = $(addprefix pub/pdf/,$(files_org:.org=.pdf))
+files_html = $(addprefix pub/html/,$(files_org:.org=.html))
 
-doc: pdf html
+all: pdf html
 
-pdf: $(FILES)
-	@mkdir -p pub/html/stylesheets
+pdf: $(files_pdf)
+pub/pdf/%.pdf: %.org
 	@$(BATCH) --visit "$<" --funcall org-publish-pdf
 	@rm README.el
 
-html: $(FILES)
-	@mkdir -p pub/html/stylesheets
+html: $(files_html)
+pub/html/%.html: %.org
 	@$(BATCH) --visit "$<" --funcall org-publish-html
 	@rm README.el
 	@echo "NOTICE: Documentation published to pub/"
@@ -35,5 +37,5 @@ publish: html
 	@echo "NOTICE: HTML documentation published"
 
 clean:
-	@rm -f *.elc *.aux *.tex *.pdf *~
+	@rm -f *.elc *.aux *.tex *.pdf *~ *.sty
 	@rm -rf pub

@@ -77,7 +77,7 @@ publish the CV into =html= and =pdf=, respectively.
 *** CSS stylesheets
 **** Main stylesheets
 :PROPERTIES:
-:HEADER-ARGS: :tangle pub/html/stylesheets/styles.css
+:HEADER-ARGS: :tangle pub/html/stylesheets/styles.css :mkdirp yes
 :END:
 ***** Google fonts
 #+BEGIN_SRC css
@@ -363,7 +363,7 @@ publish the CV into =html= and =pdf=, respectively.
 
 **** Org source code styles
 :PROPERTIES:
-:HEADER-ARGS: :tangle pub/html/stylesheets/org-pygments.css
+:HEADER-ARGS: :tangle pub/html/stylesheets/org-pygments.css :mkdirp yes
 :END:
 
 #+BEGIN_SRC css
@@ -597,22 +597,33 @@ Adobe. Inconsolata is used as monospace font.
 #+END_SRC
 ***** Document title
 #+BEGIN_SRC latex
-  \renewcommand*{\maketitle}{%
-    \globalcolor{gray}
-    \begin{minipage}[t]{2.95in}
-      \flushleft {\normalsize\@author\\\footnotesize \href{http://www.lal.in2p3.fr}{Laboratoire de l'Accélérateur Linéaire}
-        \\ Building 200, \\ Paris XI University, \\ \vspace{-0.05in} 91898 Orsay Cedex}
-    \end{minipage}
-    \hfill
-    \hfill
-    \begin{minipage}[t]{1.7in}
-      \flushright \footnotesize Phone:~\myphone \\
-      Fax:~\myfax  \\
-      {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}}} \\
-      {\scriptsize  \texttt{\href{\myweb}{\myweb}}}
-    \end{minipage}
-    \vspace{10pt}
-  }
+   \RequirePackage{ifthen}
+   \newboolean{@fr} %
+   \setboolean{@fr}{false} %
+   \DeclareOption{fr}{
+     \setboolean{@fr}{true}
+   }
+   \ProcessOptions
+   \newcommand{\mytitle}{}
+   \ifthenelse{\boolean{@fr}}{
+   \newcommand{\mytitle}{\normalsize\@author\\\footnotesize \href{http://www.lal.in2p3.fr}{Laboratoire de l'Accélérateur Linéaire}
+         \\ Building 200, \\ Paris XI University, \\ \vspace{-0.05in} 91898 Orsay Cedex}
+   }{}
+   \renewcommand*{\maketitle}{%
+     \globalcolor{gray}
+     \begin{minipage}[t]{2.95in}
+       \flushleft {\mytitle}
+     \end{minipage}
+     \hfill
+     \hfill
+     \begin{minipage}[t]{1.7in}
+       \flushright \footnotesize Phone:~\myphone \\
+       Fax:~\myfax  \\
+       {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}}} \\
+       {\scriptsize  \texttt{\href{\myweb}{\myweb}}}
+     \end{minipage}
+     \vspace{10pt}
+   }
 #+END_SRC
 
 ***** Tweaking sections & lists
@@ -634,7 +645,7 @@ Adobe. Inconsolata is used as monospace font.
                 \titlespacing{\section}{0pt}{10pt}{5pt}}{
     \titleformat{\section} %command
                 [leftmargin] %shape
-                {\footnotesize\bf\sffamily\raggedleft} %format
+                {\footnotesize\bfseries\sffamily\raggedleft} %format
                 {} %label
                 {0pt} %sep
                 {\lowercase} %before
@@ -645,7 +656,7 @@ Adobe. Inconsolata is used as monospace font.
 ****** =subsection=
 #+BEGIN_SRC latex
   \titleformat{\subsection} %command
-              {\bf\itshape} %format
+              {\bfseries\itshape} %format
               {} %label
               {0pt} %sep
               {} %before
@@ -770,6 +781,6 @@ Remove the quote block
   (defun org-publish-pdf ()
     (progn
       (org-publish-project "publish-pdf-cv" 'force)
-      (shell-command "mv ./latex.d pub/pdf/.; mv -f resume.* *.sty ./pub/pdf/latex.d/.; mv ./pub/pdf/latex.d/resume.org .")
+      (shell-command "mv ./latex.d pub/pdf/.; mv -f resume* *.sty ./pub/pdf/latex.d/.; mv ./pub/pdf/latex.d/resume*.org .")
       ))
 #+END_SRC
