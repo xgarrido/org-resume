@@ -597,33 +597,40 @@ Adobe. Inconsolata is used as monospace font.
 #+END_SRC
 ***** Document title
 #+BEGIN_SRC latex
-   \RequirePackage{ifthen}
-   \newboolean{@fr} %
-   \setboolean{@fr}{false} %
-   \DeclareOption{fr}{
-     \setboolean{@fr}{true}
-   }
-   \ProcessOptions
-   \newcommand{\mytitle}{}
-   \ifthenelse{\boolean{@fr}}{
-   \newcommand{\mytitle}{\normalsize\@author\\\footnotesize \href{http://www.lal.in2p3.fr}{Laboratoire de l'Accélérateur Linéaire}
-         \\ Building 200, \\ Paris XI University, \\ \vspace{-0.05in} 91898 Orsay Cedex}
-   }{}
-   \renewcommand*{\maketitle}{%
-     \globalcolor{gray}
-     \begin{minipage}[t]{2.95in}
-       \flushleft {\mytitle}
-     \end{minipage}
-     \hfill
-     \hfill
-     \begin{minipage}[t]{1.7in}
-       \flushright \footnotesize Phone:~\myphone \\
-       Fax:~\myfax  \\
-       {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}}} \\
-       {\scriptsize  \texttt{\href{\myweb}{\myweb}}}
-     \end{minipage}
-     \vspace{10pt}
-   }
+  \RequirePackage{ifthen}
+  \newboolean{@fr} %
+  \setboolean{@fr}{false} %
+  \DeclareOption{fr}{
+    \setboolean{@fr}{true}
+  }
+  \ProcessOptions
+  \newcommand{\mytitle}{}
+  \ifthenelse{\boolean{@fr}}{
+  \renewcommand{\mytitle}{\normalsize\@author\\\footnotesize \href{http://www.lal.in2p3.fr}{Laboratoire de l'Accélérateur Linéaire}
+        \\ Bâtiment 200, \\ Université Paris-Sud, \\ \vspace{-0.05in} 91898 Orsay Cedex}
+  }{
+  \renewcommand{\mytitle}{\normalsize\@author\\\footnotesize \href{http://www.lal.in2p3.fr}{Laboratoire de l'Accélérateur Linéaire}
+        \\ Building 200, \\ Paris-South University, \\ \vspace{-0.05in} 91898 Orsay Cedex}
+  }
+  \renewcommand*{\maketitle}{%
+    \globalcolor{gray}
+    \begin{minipage}[t]{2.95in}
+      \flushleft {\mytitle}
+    \end{minipage}
+    \hfill
+    \hfill
+    \begin{minipage}[t]{1.7in}
+      \ifthenelse{\boolean{@fr}}{
+        \flushright \footnotesize Téléphone:~\myphone \\
+      }{
+        \flushright \footnotesize Phone:~\myphone \\
+      }
+      Fax:~\myfax  \\
+      {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}}} \\
+      {\scriptsize  \texttt{\href{\myweb}{\myweb}}}
+    \end{minipage}
+    \vspace{10pt}
+  }
 #+END_SRC
 
 ***** Tweaking sections & lists
@@ -697,8 +704,17 @@ Adobe. Inconsolata is used as monospace font.
   fi
 #+END_SRC
 #+BEGIN_SRC latex :noweb yes
-  \RequirePackage{prelim2e}
-  <<vc-status()>>
+  \RequirePackage{ifthen}
+  \newboolean{@novc} %
+  \setboolean{@novc}{false} %
+  \DeclareOption{novc}{
+    \setboolean{@novc}{true}
+  }
+  \ProcessOptions
+  \ifthenelse{\boolean{@novc}}{}{
+    \RequirePackage{prelim2e}
+    <<vc-status()>>
+  }
 #+END_SRC
 *** =org= to LaTeX stuff
 **** Use smart quote when exporting
