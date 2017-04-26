@@ -3,42 +3,55 @@
 #+KEYWORDS: vita, CV, resume
 #+OPTIONS: toc:nil num:nil
 #+STARTUP: entitiespretty
+#+DESCRIPTION: CV pour demande PEPS
+#+LATEX_CLASS_OPTIONS: [10pt,fr,novc]
+#+LATEX: \newline
 
-#+BEGIN_QUOTE
-I'm an associate professor at the University of Paris-South, doing my research
-application at the Linear Accelerator Laboratory.
+*Maître de conférences à l'Université Paris-Sud depuis 2009*
 
-I'm interested in neutrino physics, looking for Majorana neutrino and thus
-searching for neutrinoless double-beta decay. I also contribute to and maintain
-some open source projects on [[https://github.com/xgarrido][GitHub]].
-#+END_QUOTE
+* Responsabilités pédagogiques
 
-* Appointments
+- *Responsable pédagogique de la Licence 3/Magistère 1 de Physique Fondamentale
+  2016--*
 
-Asociate professor at the University of Paris-South, France, 2009 -- /Present/
+  En tant que responsable pédagogique, je m'occupe en particulier du suivi des
+  étudiants et tout ce qui a attrait au secrétariat pédagogique (saisie des
+  notes, procès verbal, emploi du temps)
 
-Post doctoral position in the Karlsruhe Institute for Technology, Germany, 2008--2009
+- Responsable pédagogique de la formation Double Diplôme de Licence 3 de
+  Physique Fondamentale, 2012--2016
 
-* Education
+  La formation Double Diplôme propose aux élèves-ingénieurs d'écoles telles que
+  Centrale Paris, Institut d'Optique Graduate School ou Supelec de suivre une
+  formation universitaire en complément de leur cursus ingénieur.
 
-Ph.D. in Particle Physics from the University of Nantes, [[http://tel.archives-ouvertes.fr/index.php?halsid=kes9il76eb7ptpm9av2h0e1cp7&view_this_doc=tel-00642358&version=1]["Study of the
-composition of ultra high energy cosmic rays detected by the Pierre Auger
-Observatory and analysis of hadronic processes]], France, 2005--2008
+* Enseignements
 
-Master of Astrophysics at the University of Paris-South, France, 2003--2005
+- Chargé de travaux dirigés d'électromagnétisme en Licence 3/Magistère 1 de
+  Physique Fondamentale, Université Paris-Sud, 2012--
 
-* Teaching
+- Chargé de travaux dirigés de physique des particules & nucléaire en Master
+  1/Magistère 2 de Physique Fondamentale, Université Paris-Sud, 2013--
 
-- Teaching assistant in Electromagnetism in Licence 3 of Fundamental Physics,
-  University of Paris-South
+- Chargé de cours/travaux dirigés de l'option "Programmation en Python" en
+  Licence 3/Magistère 1 de Physique Fondamentale, Université Paris-Sud, 2016--
 
-- Teaching assistant in Nuclear & Particle Physics in Master 1 of Fundamental
-  Physics, University of Paris-South
+- Chargé de cours/travaux dirigés du langage de programmation C++ en Master 1 de
+  Physique Fondamentale, Université Paris-Sud, 2009--2016
 
-- C++ lectures in Master 1 of Fundamental Physics, University of Paris-South
+- Travaux pratiques d'optique et de physique nucléaire, Licence 3 & Master 1
+  of Physique Fondamentale, Université Paris-Sud, 2009--
 
-- Practical activities in Optics & in Nuclear Physics, Licence 3 and Master 1
-  of Fundamental Physics, University of Paris-South
+* Cursus universitaire
+
+- Contrat post-doctorat au Karlsruhe Institute for Technology, Allemagne, 2008--2009
+
+- Thèse en physique des particules de l'Université de Nantes, [[http://tel.archives-ouvertes.fr/index.php?halsid=kes9il76eb7ptpm9av2h0e1cp7&view_this_doc=tel-00642358&version=1]["Étude de la
+  composition des rayons cosmiques d'ultra-haute énergie détectés par
+  l'Observatoire Pierre Auger et analyses des processus hadroniques associés]],
+  France, 2005--2008
+
+- Master d'Astrophysique de l'Université Paris-Sud, France, 2003--2005
 
 * Publications
 
