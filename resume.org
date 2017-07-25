@@ -44,31 +44,31 @@ Master of Astrophysics at the University of Paris-South, France, 2003--2005
 
 ** Neutrino physics
 
-NEMO3 Collaboration, 2017. [[https://arxiv.org/abs/1702.07176][The BiPo-3
-detector for the measurement of ultra low natural radioactivities of thin
-materials]], Journal of Instrumentation 12.
+NEMO3 Collaboration, 2017. [[https://arxiv.org/abs/1705.08847][Search for neutrinoless quadruple-β decay of\nbsp^{150}Nd
+with the NEMO-3 detector]], /Physical Review Letters 119/.
 
-NEMO3 Collaboration, 2017. [[https://arxiv.org/abs/1610.03226][Measurement of
-the 2\nu\beta\beta decay half-life and search for the 0\nu\beta\beta decay of\nbsp^{116}Cd with the
-NEMO-3 detector]], Physical Review D95.
+NEMO3 Collaboration, 2017. [[https://arxiv.org/abs/1702.07176][The BiPo-3 detector for the measurement of ultra low
+natural radioactivities of thin materials]], /Journal of Instrumentation 12/.
 
-NEMO3 Collaboration, 2016. [[https://arxiv.org/abs/1606.08494]["Measurement of
-the 2\nu\beta\beta decay half-life of\nbsp^{150}Nd and a search for 0\nu\beta\beta decay processes with
-the full exposure from the NEMO-3 detector"]], Physical Review D94.
+NEMO3 Collaboration, 2017. [[https://arxiv.org/abs/1610.03226][Measurement of the 2\nu\beta\beta decay half-life and search
+for the 0\nu\beta\beta decay of\nbsp^{116}Cd with the NEMO-3 detector]], /Physical Review D95/.
+
+NEMO3 Collaboration, 2016. [[https://arxiv.org/abs/1606.08494]["Measurement of the 2\nu\beta\beta decay half-life of\nbsp^{150}Nd
+and a search for 0\nu\beta\beta decay processes with the full exposure from the NEMO-3
+detector"]], /Physical Review D94/.
 
 NEMO3 Collaboration, 2016. [[http://arxiv.org/abs/1604.01710]["Measurement of the double-beta decay half-life and
 search for the neutrinoless double-beta decay of\nbsp^{48}Ca with the NEMO-3
-detector"]], Physical Review D93.
+detector"]], /Physical Review D93/.
 
 NEMO3 Collaboration, 2015. [[http://arxiv.org/abs/1506.05825]["Result of the search for neutrinoless double-beta
 decay in\nbsp^{100}Mo with the NEMO-3 experiment"]], /Physical Review D92/.
 
-NEMO3 Collaboration, 2014. [[http://arxiv.org/abs/1311.5695]["Search for
-neutrinoless double-beta decay of\nbsp^{100}Mo with the NEMO-3 detector"]],
-/Physical Review D89/.
+NEMO3 Collaboration, 2014. [[http://arxiv.org/abs/1311.5695]["Search for neutrinoless double-beta decay
+of\nbsp^{100}Mo with the NEMO-3 detector"]], /Physical Review D89/.
 
-NEMO3 Collaboration, 2014. [[http://arxiv.org/abs/1402.7196]["Investigation of double beta decay of\nbsp^{100}Mo
-to excited states of\nbsp^{100}Ru"]], /Nuclear Physics A925/.
+NEMO3 Collaboration, 2014. [[http://arxiv.org/abs/1402.7196]["Investigation of double beta decay of\nbsp^{100}Mo to
+excited states of\nbsp^{100}Ru"]], /Nuclear Physics A925/.
 
 NEMO3 Collaboration, 2011. [[http://arxiv.org/abs/arXiv:1104.3716]["Measurement of the double beta decay half-life of
 \nbsp^{130}Te with the NEMO-3 detector"]], /Physical Review Letters 107/.
