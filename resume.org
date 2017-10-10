@@ -74,7 +74,7 @@ NEMO3 Collaboration, 2011. [[http://arxiv.org/abs/arXiv:1104.3716]["Measurement 
 \nbsp^{130}Te with the NEMO-3 detector"]], /Physical Review Letters 107/.
 
 SuperNEMO Collaboration, 2010. [[http://arxiv.org/abs/arXiv:1005.1241]["Probing new physics models of neutrinoless
-double beta decay with SuperNEMO"]], /European Physics Journal C70/.
+double beta decay with SuperNEMO"]], /European Physical Journal C70/.
 
 NEMO3/SuperNEMO Collaboration, 2010. [[http://arxiv.org/abs/arXiv:1005.0343]["Results of the BiPo-1 prototype for
 radiopurity measurements for the SuperNEMO double beta decay source foils"]],
@@ -85,6 +85,10 @@ and SuperNEMO detectors"]], /Nuclear Instruments and Methods in Physics Research
 A625/.
 
 ** Cosmic rays physics
+
+NA61/SHINE Collaboration, 2017. [[https://arxiv.org/abs/1705.08206][Measurement
+of meson resonance production in \pi^{-}+C interactions at SPS energies]],
+/European Physical Journal C77/.
 
 NA61/SHINE Collaboration, 2012. [[http://arxiv.org/abs/arXiv:1112.0150]["Measurement of production properties of
 positively charged kaons in proton-carbon interactions at 31 GeV/c"]], /Physical
