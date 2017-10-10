@@ -86,8 +86,8 @@ A625/.
 
 ** Cosmic rays physics
 
-NA61/SHINE Collaboration, 2017. [[https://arxiv.org/abs/1705.08206][Measurement
-of meson resonance production in \pi^{-}+C interactions at SPS energies]],
+NA61/SHINE Collaboration, 2017. [[https://arxiv.org/abs/1705.08206]["Measurement
+of meson resonance production in \pi^{-}+C interactions at SPS energies"]],
 /European Physical Journal C77/.
 
 NA61/SHINE Collaboration, 2012. [[http://arxiv.org/abs/arXiv:1112.0150]["Measurement of production properties of
