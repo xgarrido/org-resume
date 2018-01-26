@@ -81,9 +81,9 @@ publish the CV into =html= and =pdf=, respectively.
 :END:
 ***** Google fonts
 #+BEGIN_SRC css
-  @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-  @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
-  @import url(https://fonts.googleapis.com/css?family=Inconsolata);
+  @import url(//fonts.googleapis.com/css?family=Open+Sans);
+  @import url(//fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+  @import url(//fonts.googleapis.com/css?family=Inconsolata);
 #+END_SRC
 
 ***** Main =css= definitions
