@@ -25,7 +25,7 @@ publish the CV into =html= and =pdf=, respectively.
 #+NAME: html-postamble
 #+BEGIN_SRC shell :tangle no :results output
   if [ -d .git ]; then
-      LC_MESSAGES=en git --no-pager log -1 HEAD --date=short --pretty=format:'commit <a href=https://github.com/xgarrido/org-resume/commit/%H>%h</a> - %ad'
+      LC_MESSAGES=en git --no-pager log -1 HEAD --date=short --pretty=format:'<i class=\"fab fa-github-alt\"></i> commit <a href=https://github.com/xgarrido/org-resume/commit/%H>%h</a> - %ad'
   fi
 #+END_SRC
 *** Building html preamble
