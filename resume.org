@@ -5,12 +5,12 @@
 #+STARTUP: entitiespretty
 
 #+BEGIN_QUOTE
-I'm an associate professor at the University of Paris-South, doing my research
-application at the Linear Accelerator Laboratory.
+I'm an associate professor at the University of Paris-South, doing my research application at the
+Linear Accelerator Laboratory.
 
-I'm interested in neutrino physics, looking for Majorana neutrino and thus
-searching for neutrinoless double-beta decay. I also contribute to and maintain
-some open source projects on [[https://github.com/xgarrido][GitHub]].
+I'm interested in neutrino physics, looking for Majorana neutrino and thus searching for
+neutrinoless double-beta decay. I also contribute to and maintain some open source projects on
+[[https://github.com/xgarrido][GitHub]].
 #+END_QUOTE
 
 * Appointments
