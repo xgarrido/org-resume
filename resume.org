@@ -41,8 +41,14 @@ Master of Astrophysics at the University of Paris-South, France, 2003--2005
   of Fundamental Physics, University of Paris-South
 
 * Publications
+** Cosmology
+S. Henrot-Versillé, F. Couchot, X. Garrido, H. Imada, T. Louis, M.  Tristram, S. Vanneste, 2018,
+[[https://arxiv.org/abs/1807.05003]["Comparison of results on N_{eff} from various Planck likelihoods"]], /to be published/.
 
 ** Neutrino physics
+
+NEMO3 Collaboration, 2018, [[https://arxiv.org/abs/1806.05553]["Final results on\nbsp^{82}Se double beta decay to the ground state
+of\nbsp^{82}Kr from the NEMO-3 experiment"]], /European Physical Journal C 78/.
 
 NEMO3 Collaboration, 2017. [[https://arxiv.org/abs/1705.08847]["Search for neutrinoless quadruple-β decay
 of\nbsp^{150}Nd with the NEMO-3 detector"]], /Physical Review Letters 119/.
