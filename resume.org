@@ -47,9 +47,9 @@ T. Louis, X. Garrido, A. Soussana, M. Tristram, S. Henrot-Versillé, S. Vanneste
 [[https://arxiv.org/pdf/1905.06864.pdf]["Consistency of CMB experiments beyond cosmic variance"]],
 /to be published/
 
-S. Henrot-Versillé, F. Couchot, X. Garrido, H. Imada, T. Louis, M. Tristram, S. Vanneste, 2018,
+S. Henrot-Versillé, F. Couchot, X. Garrido, H. Imada, T. Louis, M. Tristram, S. Vanneste, 2019,
 [[https://arxiv.org/abs/1807.05003]["Comparison of results on N_{eff} from various Planck
-likelihoods"]], /A&A/, Volume 623, 2019.
+likelihoods"]], /A&A/, Volume 623.
 
 ** Neutrino physics
 
