@@ -54,7 +54,7 @@ likelihoods"]], /A&A/, Volume 623.
 ** Neutrino physics
 
 NEMO3 Collaboration, 2019, [[https://arxiv.org/abs/1903.08084]["Detailed studies of ^{100}Mo two-neutrino double beta decay in NEMO-3"]],
-/European Physical Journal C/.
+/European Physical Journal C 79/.
 
 NEMO3 Collaboration, 2018, [[https://arxiv.org/abs/1806.05553]["Final results on\nbsp^{82}Se double beta decay to the ground state
 of\nbsp^{82}Kr from the NEMO-3 experiment"]], /European Physical Journal C 78/.
