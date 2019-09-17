@@ -44,8 +44,7 @@ Master of Astrophysics at the University of Paris-South, France, 2003--2005
 ** Cosmology
 
 T. Louis, X. Garrido, A. Soussana, M. Tristram, S. Henrot-Versillé, S. Vanneste, 2019,
-[[https://arxiv.org/pdf/1905.06864.pdf]["Consistency of CMB experiments beyond cosmic variance"]],
-/to be published/
+[[https://arxiv.org/pdf/1905.06864.pdf]["Consistency of CMB experiments beyond cosmic variance"]], /Physical Review D100/.
 
 S. Henrot-Versillé, F. Couchot, X. Garrido, H. Imada, T. Louis, M. Tristram, S. Vanneste, 2019,
 [[https://arxiv.org/abs/1807.05003]["Comparison of results on N_{eff} from various Planck
