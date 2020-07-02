@@ -33,14 +33,14 @@ publish the CV into =html= and =pdf=, respectively.
 #+BEGIN_SRC shell :tangle no :results output
   preamble+='<div id=\"address\">'
   preamble+='<span class=\"name\">Xavier Garrido</span><br>'
-  preamble+='<a href=\"http://www.lal.in2p3.fr\">Laboratoire de l'"'"'Accélérateur Linéaire</a><br>'
-  preamble+='Paris-South University, Orsay<br>'
+  preamble+='<a href=\"http://www.ijclab.in2p3.fr\">IJCLab</a><br>'
+  preamble+='Paris-Saclay University, Orsay<br>'
   preamble+='</div>'
   preamble+='<div id=\"contact\">'
   preamble+='<span class=\"name\">&nbsp;</span><br>'
   preamble+='(33) 1 64 46 84 28<br>'
   preamble+='<a href=\"http://xgarrido.github.io\">xgarrido.github.io</a><br>'
-  preamble+='<a href=\"mailto:garrido@lal.in2p3.fr\">xavier.garrido@lal.in2p3.fr</a>'
+  preamble+='<a href=\"mailto:garrido@ijclab.in2p3.fr\">xavier.garrido@ijclab.in2p3.fr</a>'
   preamble+='</div>'
   echo -ne $preamble
 #+END_SRC
