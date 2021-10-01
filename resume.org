@@ -50,10 +50,12 @@ Magistère of Fundamental Physics at the University of Paris-South, France, 2002
 * Publications
 ** Cosmology
 
+A. La Posta, T. Louis, X. Garrido, M. Tristram, S. Henrot-Versillé [[https://arxiv.org/abs/2105.06167]["Cosmology with the Planck T-E
+correlation coefficient"]], /Physical Review D104/.
+
 T. Louis, S. Naess, X. Garrido, A. Challinor, 2020, [[https://arxiv.org/abs/2010.14344]["Fast computation of angular power spectra and
 covariances of high-resolution cosmic microwave background maps using the Toeplitz approximation"]],
 /Physical Review D102/.
-
 
 T. Louis, X. Garrido, A. Soussana, M. Tristram, S. Henrot-Versillé, S. Vanneste, 2019, [[https://arxiv.org/pdf/1905.06864.pdf]["Consistency
 of CMB experiments beyond cosmic variance"]], /Physical Review D100/.
