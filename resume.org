@@ -65,6 +65,9 @@ S. Henrot-Versillé, F. Couchot, X. Garrido, H. Imada, T. Louis, M. Tristram, S.
 
 ** Neutrino physics
 
+SuperNEMO Collaboration, 2021, [[https://arxiv.org/abs/2011.07657]["Search for Periodic Modulations of the Rate of Double-Beta Decay of
+^{100}Mo in the NEMO-3 Detector"]], /Physical Review C 104/.
+
 SuperNEMO Collaboration, 2020, [[https://www.degruyter.com/view/j/ract.2020.108.issue-2/ract-2019-3129/ract-2019-3129.xml?format=INT]["Development of methods for the preparation of radiopure\nbsp^{82}Se
 sources for the SuperNEMO neutrinoless double-beta decay experiment"]], Radiochimica Acta.
 
