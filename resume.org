@@ -49,6 +49,8 @@ Magistère of Fundamental Physics at the University of Paris-South, France, 2002
 
 * Publications
 ** Cosmology
+A. La Posta, T. Louis, X. Garrido, J. Colin Hill, 2021, [[https://arxiv.org/abs/2112.10754]["Constraints on Pre-Recombination Early Dark
+Energy from SPT-3G Public Data"]], /to be published/.
 
 A. La Posta, T. Louis, X. Garrido, M. Tristram, S. Henrot-Versillé, 2021, [[https://arxiv.org/abs/2105.06167]["Cosmology with the Planck
 T-E correlation coefficient"]], /Physical Review D104/.
