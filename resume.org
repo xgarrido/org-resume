@@ -75,6 +75,9 @@ S. Henrot-Versillé, F. Couchot, X. Garrido, H. Imada, T. Louis, M. Tristram, S.
 SuperNEMO Collaboration, 2021, [[https://arxiv.org/abs/2011.07657]["Search for periodic modulations of the rate of double-beta decay of
 ^{100}Mo in the NEMO-3 detector"]], /Physical Review C 104/.
 
+NEMO3 Collaboration, 2020, [[https://arxiv.org/abs/2001.06388]["Search for the double-beta decay of\nbsp^{82}Se to the excited states
+of\nbsp^{82}Kr with NEMO-3]], /Nuclear Physics A 996/.
+
 SuperNEMO Collaboration, 2020, [[https://www.degruyter.com/view/j/ract.2020.108.issue-2/ract-2019-3129/ract-2019-3129.xml?format=INT]["Development of methods for the preparation of radiopure\nbsp^{82}Se
 sources for the SuperNEMO neutrinoless double-beta decay experiment"]], Radiochimica Acta.
 
@@ -83,6 +86,9 @@ NEMO3 Collaboration, 2019, [[https://arxiv.org/abs/1903.08084]["Detailed studies
 
 NEMO3 Collaboration, 2018, [[https://arxiv.org/abs/1806.05553]["Final results on\nbsp^{82}Se double beta decay to the ground state
 of\nbsp^{82}Kr from the NEMO-3 experiment"]], /European Physical Journal C 78/.
+
+SuperNEMO Collaboration, 2017, [[https://arxiv.org/abs/1707.06823]["Calorimeter development for the SuperNEMO double beta decay
+experiment"]], /Nuclear Instruments and Methods in Physics Research A868/.
 
 NEMO3 Collaboration, 2017. [[https://arxiv.org/abs/1705.08847]["Search for neutrinoless quadruple-β decay of\nbsp^{150}Nd with the NEMO-3
 detector"]], /Physical Review Letters 119/.
