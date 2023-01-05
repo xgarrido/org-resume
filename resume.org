@@ -49,7 +49,7 @@ Magistère of Fundamental Physics at the University of Paris-South, France, 2002
 
 * Publications
 ** Cosmology
-A. La Posta, U. Natale, E. Calabrese, X. Garrido, T. Louis, [[https://arxiv.org/abs/2204.01885]["Assessing the consistency between CMB
+A. La Posta, U. Natale, E. Calabrese, X. Garrido, T. Louis, 2022, [[https://arxiv.org/abs/2204.01885]["Assessing the consistency between CMB
 temperature and polarization measurements with application to Planck, ACT, and SPT data"]], /Physical
 Review D107/.
 
