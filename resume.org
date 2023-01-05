@@ -49,13 +49,17 @@ Magistère of Fundamental Physics at the University of Paris-South, France, 2002
 
 * Publications
 ** Cosmology
+A. La Posta, U. Natale, E. Calabrese, X. Garrido, T. Louis, [[https://arxiv.org/abs/2204.01885]["Assessing the consistency between CMB
+temperature and polarization measurements with application to Planck, ACT, and SPT data"]], /Physical
+Review D107/.
+
 Z. Li, T. Louis, E. Calabrese, H. Jense, D. Alonso, J. R. Bond, S. K. Choi, J. Dunkley, G. Fabbian,
 X. Garrido, A. H. Jaffe, M. S. Madhavacheril, P. D. Meerburg, U. Natale, F. J. Qu, 2021, [[https://arxiv.org/abs/2112.13839]["The Simons
 Observatory: a new open-source power spectrum pipeline applied to the Planck legacy data"]], /to be
 published/.
 
 A. La Posta, T. Louis, X. Garrido, J. Colin Hill, 2021, [[https://arxiv.org/abs/2112.10754]["Constraints on Pre-Recombination Early Dark
-Energy from SPT-3G Public Data"]], /to be published/.
+Energy from SPT-3G Public Data"]], /Physical Review D105/.
 
 A. La Posta, T. Louis, X. Garrido, M. Tristram, S. Henrot-Versillé, 2021, [[https://arxiv.org/abs/2105.06167]["Cosmology with the Planck
 T-E correlation coefficient"]], /Physical Review D104/.
