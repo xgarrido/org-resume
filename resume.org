@@ -84,6 +84,8 @@ S. Henrot-Versillé, F. Couchot, X. Garrido, H. Imada, T. Louis, M. Tristram, S.
 [[https://arxiv.org/abs/1807.05003]["Comparison of results on N_{eff} from various Planck likelihoods"]], /A&A/, Volume 623.
 
 ** Neutrino physics
+NEMO3 Collaboration, 2022, [[https://arxiv.org/abs/2203.03356]["Measurement of double beta decay of ^{150}Nd to the 0^+_1 excited state
+of ^{150}Sm in NEMO-3"]], /to be published/
 
 SuperNEMO Collaboration, 2021, [[https://arxiv.org/abs/2011.07657]["Search for periodic modulations of the rate of double-beta decay of
 ^{100}Mo in the NEMO-3 detector"]], /Physical Review C 104/.
