@@ -49,6 +49,15 @@ Magistère of Fundamental Physics at the University of Paris-South, France, 2002
 
 * Publications
 ** Cosmology
+ACT Collaboration, 2023, [[https://arxiv.org/abs/2307.01258]["The Atacama Cosmology Telescope: High-resolution component-separated maps
+across one-third of the sky"]], /to be published/
+
+ACT Collaboration, 2023, [[https://arxiv.org/abs/2304.05203]["The Atacama Cosmology Telescope: DR6 Gravitational Lensing Map and
+Cosmological Parameters"]], /to be published/
+
+ACT Collaboration, 2023, [[https://arxiv.org/abs/2304.05202]["The Atacama Cosmology Telescope: A
+Measurement of the DR6 CMB Lensing Power Spectrum and its Implications for Structure Growth"]], /to be published/
+
 A. La Posta, U. Natale, E. Calabrese, X. Garrido, T. Louis, 2022, [[https://arxiv.org/abs/2204.01885]["Assessing the consistency between CMB
 temperature and polarization measurements with application to Planck, ACT, and SPT data"]], /Physical
 Review D107/.
