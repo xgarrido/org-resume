@@ -49,18 +49,22 @@ Magistère of Fundamental Physics at the University of Paris-South, France, 2002
 
 * Publications
 ** Cosmology
+M. Tristram, A. J. Banday, M. Douspis, X. Garrido, K. M. Górski, S. Henrot-Versillé, S. Ilić,
+R. Keskitalo, G. Lagache, C. R. Lawrence, B. Partridge, D. Scott, 2023, [[https://arxiv.org/abs/2309.10034]["Cosmological parameters
+derived from the final (PR4) Planck data release"]], /to be published/
+
 ACT Collaboration, 2023, [[https://arxiv.org/abs/2307.01258]["The Atacama Cosmology Telescope: High-resolution component-separated maps
 across one-third of the sky"]], /to be published/
 
 ACT Collaboration, 2023, [[https://arxiv.org/abs/2304.05203]["The Atacama Cosmology Telescope: DR6 Gravitational Lensing Map and
 Cosmological Parameters"]], /to be published/
 
-ACT Collaboration, 2023, [[https://arxiv.org/abs/2304.05202]["The Atacama Cosmology Telescope: A
-Measurement of the DR6 CMB Lensing Power Spectrum and its Implications for Structure Growth"]], /to be published/
+ACT Collaboration, 2023, [[https://arxiv.org/abs/2304.05202]["The Atacama Cosmology Telescope: A Measurement of the DR6 CMB Lensing
+Power Spectrum and its Implications for Structure Growth"]], /to be published/
 
-A. La Posta, U. Natale, E. Calabrese, X. Garrido, T. Louis, 2022, [[https://arxiv.org/abs/2204.01885]["Assessing the consistency between CMB
-temperature and polarization measurements with application to Planck, ACT, and SPT data"]], /Physical
-Review D107/.
+A. La Posta, U. Natale, E. Calabrese, X. Garrido, T. Louis, 2022, [[https://arxiv.org/abs/2204.01885]["Assessing the consistency between
+CMB temperature and polarization measurements with application to Planck, ACT, and SPT data"]],
+/Physical Review D107/.
 
 Z. Li, T. Louis, E. Calabrese, H. Jense, D. Alonso, J. R. Bond, S. K. Choi, J. Dunkley, G. Fabbian,
 X. Garrido, A. H. Jaffe, M. S. Madhavacheril, P. D. Meerburg, U. Natale, F. J. Qu, 2021, [[https://arxiv.org/abs/2112.13839]["The Simons
