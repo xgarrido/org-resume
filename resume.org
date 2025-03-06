@@ -49,15 +49,18 @@ Magistère of Fundamental Physics at the University of Paris-South, France, 2002
 
 * Publications
 ** Cosmology
+SO Collaboration, 2025, [[https://arxiv.org/abs/2503.00636]["The Simons Observatory: Science Goals and Forecasts for the Enhanced Large
+Aperture Telescope"]], /to be published/
+
 M. Tristram, A. J. Banday, M. Douspis, X. Garrido, K. M. Górski, S. Henrot-Versillé, S. Ilić,
 R. Keskitalo, G. Lagache, C. R. Lawrence, B. Partridge, D. Scott, 2023, [[https://arxiv.org/abs/2309.10034]["Cosmological parameters
-derived from the final (PR4) Planck data release"]], /to be published/
+derived from the final (PR4) Planck data release"]], /A&A, Volume 682/
 
 ACT Collaboration, 2023, [[https://arxiv.org/abs/2307.01258]["The Atacama Cosmology Telescope: High-resolution component-separated maps
 across one-third of the sky"]], /to be published/
 
 ACT Collaboration, 2023, [[https://arxiv.org/abs/2304.05203]["The Atacama Cosmology Telescope: DR6 Gravitational Lensing Map and
-Cosmological Parameters"]], /to be published/
+Cosmological Parameters"]], /The Astrophysical Journal, Volume 962/
 
 ACT Collaboration, 2023, [[https://arxiv.org/abs/2304.05202]["The Atacama Cosmology Telescope: A Measurement of the DR6 CMB Lensing
 Power Spectrum and its Implications for Structure Growth"]], /to be published/
