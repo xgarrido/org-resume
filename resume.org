@@ -79,8 +79,7 @@ CMB temperature and polarization measurements with application to Planck, ACT, a
 
 Z. Li, T. Louis, E. Calabrese, H. Jense, D. Alonso, J. R. Bond, S. K. Choi, J. Dunkley, G. Fabbian,
 X. Garrido, A. H. Jaffe, M. S. Madhavacheril, P. D. Meerburg, U. Natale, F. J. Qu, 2021, [[https://arxiv.org/abs/2112.13839]["The Simons
-Observatory: a new open-source power spectrum pipeline applied to the Planck legacy data"]], /to be
-published/.
+Observatory: a new open-source power spectrum pipeline applied to the Planck legacy data"]], /JCAP 09/.
 
 A. La Posta, T. Louis, X. Garrido, J. Colin Hill, 2021, [[https://arxiv.org/abs/2112.10754]["Constraints on Pre-Recombination Early Dark
 Energy from SPT-3G Public Data"]], /Physical Review D105/.
