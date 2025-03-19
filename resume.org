@@ -49,6 +49,14 @@ Magistère of Fundamental Physics at the University of Paris-South, France, 2002
 
 * Publications
 ** Cosmology
+ACT Collaboration, 2025, [[https://arxiv.org/abs/2503.14454]["The Atacama Cosmology Telescope: DR6 Constraints on Extended Cosmological
+Models"]], /to be published/
+
+ACT Collaboration, 2025, [[https://arxiv.org/abs/2503.14452]["The Atacama Cosmology Telescope: DR6 Power Spectra, Likelihoods and ΛCDM
+Parameters"]], /to be published/
+
+ACT Collaboration, 2025, [[https://arxiv.org/abs/2503.14451]["The Atacama Cosmology Telescope: DR6 Maps"]], /to be published/
+
 SO Collaboration, 2025, [[https://arxiv.org/abs/2503.00636]["The Simons Observatory: Science Goals and Forecasts for the Enhanced Large
 Aperture Telescope"]], /to be published/
 
