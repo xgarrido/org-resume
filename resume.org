@@ -60,9 +60,6 @@ Parameters"]], /to be published/
 
 ACT Collaboration, 2025, [[https://arxiv.org/abs/2503.14451]["The Atacama Cosmology Telescope: DR6 Maps"]], /to be published/
 
-SO Collaboration, 2025, [[https://arxiv.org/abs/2503.00636]["The Simons Observatory: Science Goals and Forecasts for the Enhanced Large
-Aperture Telescope"]], /to be published/
-
 M. Tristram, A. J. Banday, M. Douspis, X. Garrido, K. M. Górski, S. Henrot-Versillé, S. Ilić,
 R. Keskitalo, G. Lagache, C. R. Lawrence, B. Partridge, D. Scott, 2023, [[https://arxiv.org/abs/2309.10034]["Cosmological parameters
 derived from the final (PR4) Planck data release"]], /A&A, Volume 682/.
