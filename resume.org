@@ -53,12 +53,12 @@ SO Collaboration, 2025, [[https://arxiv.org/abs/2503.00636]["The Simons Observat
 Aperture Telescope"]], /JCAP 08/.
 
 ACT Collaboration, 2025, [[https://arxiv.org/abs/2503.14454]["The Atacama Cosmology Telescope: DR6 Constraints on Extended Cosmological
-Models"]], /to be published/
+Models"]], /JCAP 11/.
 
 ACT Collaboration, 2025, [[https://arxiv.org/abs/2503.14452]["The Atacama Cosmology Telescope: DR6 Power Spectra, Likelihoods and ΛCDM
-Parameters"]], /to be published/
+Parameters"]], /JCAP 11/.
 
-ACT Collaboration, 2025, [[https://arxiv.org/abs/2503.14451]["The Atacama Cosmology Telescope: DR6 Maps"]], /to be published/
+ACT Collaboration, 2025, [[https://arxiv.org/abs/2503.14451]["The Atacama Cosmology Telescope: DR6 Maps"]], /JCAP 11/.
 
 M. Tristram, A. J. Banday, M. Douspis, X. Garrido, K. M. Górski, S. Henrot-Versillé, S. Ilić,
 R. Keskitalo, G. Lagache, C. R. Lawrence, B. Partridge, D. Scott, 2023, [[https://arxiv.org/abs/2309.10034]["Cosmological parameters
