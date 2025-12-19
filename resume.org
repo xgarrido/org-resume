@@ -49,6 +49,9 @@ Magistère of Fundamental Physics at the University of Paris-South, France, 2002
 
 * Publications
 ** Cosmology
+SO Collaboration, 2025, [[https://arxiv.org/abs/2512.15833]["The Simons Observatory: forecasted constraints on primordial gravitational
+waves with the expanded array of Small Aperture Telescopes"]], /to be published/.
+
 SO Collaboration, 2025, [[https://arxiv.org/abs/2503.00636]["The Simons Observatory: Science Goals and Forecasts for the Enhanced Large
 Aperture Telescope"]], /JCAP 08/.
 
