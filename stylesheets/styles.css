@@ -30,13 +30,14 @@ h3, h4, h5, h6 {
 }
 
 a {
-    color: #3399cc; /*#67ad00;*/
+    color: #4C72B0; /*#67ad00;*/
     font-weight:400;
     text-decoration:none;
 }
 
 a:hover {
-    color:#006699; /*#7fd600;*/
+    color:#4C72B0; /*#7fd600;*/
+    opacity: 0.75;
 }
 
 a small {
